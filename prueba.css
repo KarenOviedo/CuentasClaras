@@ -1,0 +1,15 @@
+thead, tbody, tr, td, th { display: block; }
+
+
+
+
+tbody {
+    height: 120px;
+    overflow-y: auto;
+}
+
+
+tbody td, thead th {
+    width: 19.2%;
+    float: left;
+}

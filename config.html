@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cuentas Claras - Configuraciones</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Cuentas Claras para Banco Tecnología">
+    <meta name="author" content="Karen Oviedo">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/png" href="styles/images/favicon.png"/>
+
+	 <!--BOOTSTRAP CSS-->
+    <link rel="stylesheet" href="styles/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="styles/bootstrap/css/bootstrap.min.css">
+
+    <!--HOJAS DE ESTILOS-->
+    <link rel="stylesheet" href="styles/css/index.css">
+
+    <!--FUENTES-->
+    <link rel="stylesheet" type="text/css" href="styles/fonts/sansation_bold/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="styles/fonts/sansation_light/stylesheet.css">
+
+    <!--FONT AWESOME-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+
+</head>
+<body>
+
+	<!-- BARRA DE NAVEGACIÓN SUPERIOR -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top my-bar">
+      <div class="container">
+
+      	<!-- LOGO Banco TECNOLOGÍA -->
+      	<a class="navbar-brand" href="home.html">
+      		<img src="styles/images/logo3_med.png" id="logo-navbar" class="logo-navbar">
+  		</a>
+
+  		<!-- BOTÓN COLAPSABLE PARA DISPOSITIVOS MÓVILES -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- ELEMENTOS DE LA BARRA DE NAVEGACIÓN -->
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="home.html">
+                <i class="fa fa-home"></i> Inicio
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="edc.html">
+                <i class="fa fa-piggy-bank"></i> Estado de Cuenta
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="history.html">
+                <i class="fa fa-history"></i> Historial
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="search.html">
+                <i class="fa fa-search"></i> Búsqueda
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="help.html">
+                <i class="fa fa-question-circle"></i> Preguntas Frecuentes
+              </a>
+            </li>
+            <li class="btn-profile-active">
+              <div class="dropdown btn-profile">
+                <button class="btn dropdown-toggle " type="button" id="logo-navbar" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="fa fa-user-circle"></i> Mi Cuenta
+                </button>
+                <ul class="dropdown-menu my-dropdown">
+                  <li class="nav-item">
+                    <a class="nav-link drp-link" href="profile.html">
+                      <i class="fa fa-user"></i> Mi Perfil
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link drp-link" href="info_fiscal.html">
+                      <i class="fa fa-gavel"></i> Inf. Fiscal
+                    </a>
+                  </li>
+                  <li class="nav-item active">
+                    <a class="nav-link drp-link" href="config.html">
+                      <i class="fa fa-cog"></i> Configuración
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link drp-link" href="index.html">
+                      <i class="fa fa-sign-out-alt"></i> Cerrar Sesión
+                    </a>
+                  </li>                
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav> <!-- FIN BARRA DE NAVEGACIÓN -->
+
+    <!-- Page Content -->
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center main-text">
+          <br><br>
+          
+          <h1 class="mt-5 font1 red-color">Cuentas Claras</h1>
+          <hr>
+          <h2 class="mt-5 font1 red-color subtitle">Configuración</h2>
+        </div>
+
+        <div class="col-lg-1"></div>
+
+        <div class="col-lg-10 supplementary-text text-center">
+          <hr>    
+        </div>
+      </div>
+
+
+
+      <div class="row" id="conf1">
+        <div class="separacion"></div>
+        <div class="col-lg-1"></div>
+        <div class="col-lg-10 config-tab">
+          <br>
+          <h4 class="font2 red-color"><strong><i class="fa fa-key"></i> Cambio de Contraseña de Acceso</strong></h4>
+          <hr>
+
+          <form class="form-signin" action="config.html#conf1">
+            <div class="form-label-group">
+              <label>Contraseña Actual:</label>
+              <input type="password" id="passActual" class="form-control" placeholder="8 caracteres alfanuméricos" required>
+            </div>
+            <br>
+            <div class="form-label-group">
+              <label>Nueva contraseña de acceso:</label>
+              <input type="password" id="newPass1" class="form-control" placeholder="8 caracteres alfanuméricos" required>
+            </div>
+            <br>
+            <div class="form-label-group">
+              <label>Confirme su contraseña de acceso:</label>
+              <input type="password" id="newPass2" class="form-control" placeholder="8 caracteres alfanuméricos" required>
+              <div class="alert alert-light">
+                <strong>NOTA!</strong> Debe contener un longitud de 8 caracteres alfanuméricos, por ejemplo: SbCg3508. No se aceptan caracteres especiales, tales como _ñ:/;+á*
+              </div>
+            </div>
+            <br><br>
+            <button class="btn btn-lg btn-block text-uppercase" type="submit" onclick="changePass()">Continuar</button>
+          </form>
+
+          <br>
+        </div>
+      </div>
+
+
+
+
+      <div class="row" id="conf2">
+        <div class="separacion"></div>
+        <div class="col-lg-1"></div>
+        <div class="col-lg-10 config-tab">
+          <br>
+          <h4 class="font2 red-color"><strong><i class="fa fa-folder-open"></i> Actualización de Datos Personales</strong></h4>
+          <hr>
+
+          <form class="form-signin" action="config.html#conf2">
+            <div class="form-label-group">
+              <h5 class="font2">Domicilio:</h5>
+              <label>Calle y número:</label>
+              <input type="text" id="newDomicilio1" class="form-control" placeholder="Domicilio1" required><br>
+              <label>Colonia/Delegación y Ciudad:</label>
+              <input type="text" id="newDomicilio2" class="form-control" placeholder="Domicilio2" required><br>
+              <label>Municipio y Estado:</label>
+              <input type="text" id="newDomicilio3" class="form-control" placeholder="Domicili3" required>
+            </div>
+            <br>
+            <div class="form-label-group">
+              <hr>
+              <label>Teléfono:</label>
+              <input type="text" name="newTelefono" id="newTelefono" placeholder="Teléfono" class="form-control" required>
+            </div>
+            <br>
+            <div class="form-label-group">
+              <hr>
+              <label>Correo Electrónico:</label>
+              <input type="text" id="newCorreo" class="form-control" placeholder="Correo Electrónico" required>
+            </div>
+            <br><br>
+            <button class="btn btn-lg btn-block text-uppercase" type="submit" onclick="changeData()">Guardar Cambios</button>
+          </form>
+
+          <br>
+        </div>
+      </div>
+
+      <div class="row" id="conf3">
+        <div class="separacion"></div>
+        <div class="col-lg-1"></div>
+        <div class="col-lg-10 config-tab">
+          <br>
+          <h4 class="font2 red-color"><strong><i class="fa fa-sort-amount-up"></i> Actualización del Orden de las Secciones del Estado de Cuenta</strong></h4>
+          <hr><br>
+
+          <form class="section-cards form-signin" action="config.html#conf3">         
+
+            <div class="form-inline">
+              <div class="section-icon"><h5 class="font1 red-color-osc">1 -</h5></div>
+              <select class="section-card" id="seccionPos1">
+                <option value="1">1-Resumen Informativo</option>
+                <option value="2">2-Resumen Cuenta de Cheques</option>
+                <option value="3">3-Resumen Mis Metas Banco</option>
+                <option value="4">4-Detalle de Movimientos Cuenta de Cheques</option>
+                <option value="5">5-Detalle de Movimientos Mis Metas Banco</option>
+              </select>
+            </div>
+
+            <div class="form-inline">
+              <div class="section-icon"><h5 class="font1 red-color-osc">2 -</h5></div>
+              <select class="section-card" id="seccionPos2">
+                <option value="1">1-Resumen Informativo</option>
+                <option value="2">2-Resumen Cuenta de Cheques</option>
+                <option value="3">3-Resumen Mis Metas Banco</option>
+                <option value="4">4-Detalle de Movimientos Cuenta de Cheques</option>
+                <option value="5">5-Detalle de Movimientos Mis Metas Banco</option>
+              </select>
+            </div>
+
+            <div class="form-inline">
+              <div class="section-icon"><h5 class="font1 red-color-osc">3 -</h5></div>
+              <select class="section-card" id="seccionPos3">
+                <option value="1">1-Resumen Informativo</option>
+                <option value="2">2-Resumen Cuenta de Cheques</option>
+                <option value="3">3-Resumen Mis Metas Banco</option>
+                <option value="4">4-Detalle de Movimientos Cuenta de Cheques</option>
+                <option value="5">5-Detalle de Movimientos Mis Metas Banco</option>
+              </select>
+            </div>
+
+            <div class="form-inline">
+              <div class="section-icon"><h5 class="font1 red-color-osc">4 -</h5></div>
+              <select class="section-card" id="seccionPos4">
+                <option value="1">1-Resumen Informativo</option>
+                <option value="2">2-Resumen Cuenta de Cheques</option>
+                <option value="3">3-Resumen Mis Metas Banco</option>
+                <option value="4">4-Detalle de Movimientos Cuenta de Cheques</option>
+                <option value="5">5-Detalle de Movimientos Mis Metas Banco</option>
+              </select>
+            </div class="form-inline">
+
+            <div class="form-inline">
+              <div class="section-icon"><h5 class="font1 red-color-osc">5 -</h5></div>
+              <select class="section-card" id="seccionPos5">
+                <option value="1">1-Resumen Informativo</option>
+                <option value="2">2-Resumen Cuenta de Cheques</option>
+                <option value="3">3-Resumen Mis Metas Banco</option>
+                <option value="4">4-Detalle de Movimientos Cuenta de Cheques</option>
+                <option value="5">5-Detalle de Movimientos Mis Metas Banco</option>
+              </select>
+            </div>
+
+            <br>
+
+            <div class="form-signin2 btn-centro">
+              <button class="btn text-uppercase" type="submit" onclick="restoreSecciones()">Reestablecer Orden</button>
+            </div>
+            <br>
+            <button class="btn btn-lg btn-block text-uppercase" type="submit" onclick="changeSecciones()">Guardar Cambios</button>
+            
+
+          </form>
+
+
+          <br>
+        </div>
+      </div>
+
+
+
+    </div>
+
+    <br><br><br>
+
+
+    <!--FOOTER-->
+    <div class="footer">
+    	<br><br>
+
+    	<img src="styles/images/logo.png" id="logo-fppter" class="logo-footer">
+
+    	<p>
+    		<br>Banco Banco (México) S.A., Institución de Banca Múltiple, 
+    		<br> 
+    		Grupo Financiero Banco México, R.F.C. BSM970519DU8.
+    	</p>
+    	<p>
+    		Prolongación Paseo de la Reforma no. 500 piso 2 mod. 206, 
+    		<br>
+    		Col. Lomas de Santa Fe, Delegación Álvaro Obregón, C.P. 01219, Ciudad de México.
+    	</p>
+
+    	<br>
+
+    	<p>
+    		Agradeceremos nos comunique sus objeciones en un plazo de 90 días, 
+    		<br>
+    		de lo contrario consideraremos su conformidad.
+    	</p>
+
+    	<br>
+    </div>
+
+    <!-- BOOTSTRAP JS -->
+    <script src="styles/jquery/jquery.min.js"></script>
+    <script src="styles/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+    <!-- JAVASCRIPT -->
+    <!--DATA FILE-->
+    <script type="text/javascript" src="data.js"></script>
+
+    
+
+    <script type="text/javascript">
+
+      //Set valores actuales en los campos de datos personales para más facilidad de edición
+      if (sessionStorage.getItem("strDomicilio1") === null) {
+        document.getElementById("newDomicilio1").value = "Damianas 1020";  
+      } else{
+        document.getElementById("newDomicilio1").value = sessionStorage.getItem("strDomicilio1");      
+      }
+      if (sessionStorage.getItem("strDomicilio2") === null) {
+        document.getElementById("newDomicilio2").value = "Independencia, Guadalajara";  
+      } else{
+        document.getElementById("newDomicilio2").value = sessionStorage.getItem("strDomicilio2");      
+      }
+      if (sessionStorage.getItem("strDomicilio3") === null) {
+        document.getElementById("newDomicilio3").value = "Guadalajara, Jalisco";  
+      } else{
+        document.getElementById("newDomicilio3").value = sessionStorage.getItem("strDomicilio3");      
+      }
+      if (sessionStorage.getItem("strTelefono") === null) {
+        document.getElementById("newTelefono").value = "+52 1 442 280 0621";
+      } else{
+        document.getElementById("newTelefono").value = sessionStorage.getItem("strTelefono");
+      }
+      if (sessionStorage.getItem("strCorreo") === null) {
+        document.getElementById("newCorreo").value = "keoviedo@serviciosexternos.isban.mx";
+      } else{
+        document.getElementById("newCorreo").value = sessionStorage.getItem("strCorreo");
+      }
+
+
+
+      //Set valores actuales en los campos de orden de las secciones para facilidad de edición
+      if (sessionStorage.getItem("posUno") === null) {
+        document.getElementById("seccionPos1").selectedIndex = 0;
+      } else{
+        document.getElementById("seccionPos1").selectedIndex = sessionStorage.getItem("posUno") - 1;
+      }
+      if (sessionStorage.getItem("posDos") === null) {
+        document.getElementById("seccionPos2").selectedIndex = 1;
+      } else{
+        document.getElementById("seccionPos2").selectedIndex = sessionStorage.getItem("posDos") - 1;
+      }
+      if (sessionStorage.getItem("posTres") === null) {
+        document.getElementById("seccionPos3").selectedIndex = 2;
+      } else{
+        document.getElementById("seccionPos3").selectedIndex = sessionStorage.getItem("posTres") - 1;
+      }
+      if (sessionStorage.getItem("posCuatro") === null) {
+        document.getElementById("seccionPos4").selectedIndex = 3;
+      } else{
+        document.getElementById("seccionPos4").selectedIndex = sessionStorage.getItem("posCuatro") - 1;
+      }
+      if (sessionStorage.getItem("posCinco") === null) {
+        document.getElementById("seccionPos5").selectedIndex = 4;
+      } else{
+        document.getElementById("seccionPos5").selectedIndex = sessionStorage.getItem("posCinco") - 1;
+      }
+
+
+
+      function changePass(){
+
+        var localPass;
+
+        if (sessionStorage.getItem("pass") === null) {
+          localPass = "1234"; //1234
+        } else{
+          localPass = sessionStorage.getItem("pass");
+        }
+
+        var passActual = document.getElementById("passActual").value;
+        var newPass1 = document.getElementById("newPass1").value;
+        var newPass2 = document.getElementById("newPass2").value;
+        if (passActual != "") {
+          if (passActual != localPass) {
+            alert("La contraseña ingresada es incorrecta.");
+          } else if (newPass1 != newPass2) {
+            alert("Las nuevas contraseñas no coinciden.");
+          } else if (passActual == newPass1) {
+            alert("La nueva contraseña es igual a la anterior. Elige una nueva.");
+          } else{
+            localPass = newPass1;
+            sessionStorage.setItem("pass", localPass);
+            alert("¡La contraseña se modificó con éxito!");
+          }
+        }
+      }
+
+
+      function changeData(){
+        var newDomicilio1 = document.getElementById("newDomicilio1").value;
+        var newDomicilio2 = document.getElementById("newDomicilio2").value;
+        var newDomicilio3 = document.getElementById("newDomicilio3").value;
+        var newTelefono = document.getElementById("newTelefono").value;
+        var newCorreo = document.getElementById("newCorreo").value;
+
+        strDomicilio1 = newDomicilio1;
+        strDomicilio2 = newDomicilio2;
+        strDomicilio3 = newDomicilio3;
+        strTelefono = newTelefono;
+        strCorreo = newCorreo;
+
+        sessionStorage.setItem("strDomicilio1", strDomicilio1);
+        sessionStorage.setItem("strDomicilio2", strDomicilio2);
+        sessionStorage.setItem("strDomicilio3", strDomicilio3);
+        sessionStorage.setItem("strTelefono", strTelefono);
+        sessionStorage.setItem("strCorreo", strCorreo);
+
+        alert("¡Los cambios se guardaron con éxito!");
+      }
+
+
+      function changeSecciones(){
+        var seccionPos1 = document.getElementById("seccionPos1");
+        var seccionPos2 = document.getElementById("seccionPos2");
+        var seccionPos3 = document.getElementById("seccionPos3");
+        var seccionPos4 = document.getElementById("seccionPos4");
+        var seccionPos5 = document.getElementById("seccionPos5");
+
+        var strPos1 = seccionPos1.options[seccionPos1.selectedIndex].value;
+        var strPos2 = seccionPos2.options[seccionPos2.selectedIndex].value;
+        var strPos3 = seccionPos3.options[seccionPos3.selectedIndex].value;
+        var strPos4 = seccionPos4.options[seccionPos4.selectedIndex].value;
+        var strPos5 = seccionPos5.options[seccionPos5.selectedIndex].value;
+
+        var posiciones = new Array(strPos1, strPos2, strPos3, strPos4, strPos5);
+        //var posiciones = [strPos1, strPos2, strPos3, strPos4, strPos5];
+
+        if (hasDuplicates(posiciones)) {
+          alert("¡Hay secciones que se repiten! Ordénalas de nuevo.");
+        } else {
+          var posUno = posiciones[0];
+          var posDos = posiciones[1];
+          var posTres = posiciones[2];
+          var posCuatro = posiciones[3];
+          var posCinco = posiciones[4];
+
+          sessionStorage.setItem("posUno", posUno);
+          sessionStorage.setItem("posDos", posDos);
+          sessionStorage.setItem("posTres", posTres);
+          sessionStorage.setItem("posCuatro", posCuatro);
+          sessionStorage.setItem("posCinco", posCinco);
+
+          alert("¡Los cambios se guardaron con éxito! ");
+        }  
+      }
+
+
+
+
+      function restoreSecciones(){
+        sessionStorage.removeItem("posUno");
+        sessionStorage.removeItem("posDos");
+        sessionStorage.removeItem("posTres");
+        sessionStorage.removeItem("posCuatro");
+        sessionStorage.removeItem("posCinco");
+
+        document.getElementById("seccionPos1").selectedIndex = 0;
+        document.getElementById("seccionPos2").selectedIndex = 1;
+        document.getElementById("seccionPos3").selectedIndex = 2;
+        document.getElementById("seccionPos4").selectedIndex = 3;
+        document.getElementById("seccionPos5").selectedIndex = 4;
+
+        alert("Se reestableció el orden de las Secciones del Estado de Cuenta");
+      }
+
+
+      function hasDuplicates(array) {
+        return (new Set(array)).size !== array.length;
+      }
+      
+
+    </script>
+
+</body>
+</html>

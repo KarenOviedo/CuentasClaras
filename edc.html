@@ -1,0 +1,1224 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cuentas Claras - Estado de Cuenta</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Cuentas Claras para Banco Tecnología">
+    <meta name="author" content="Karen Oviedo">
+
+     <!-- Favicon -->
+    <link rel="shortcut icon" type="image/png" href="styles/images/favicon.png"/>
+
+	  <!--BOOTSTRAP CSS-->
+    <link rel="stylesheet" href="styles/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="styles/bootstrap/css/bootstrap.min.css">
+
+    <!--HOJAS DE ESTILOS-->
+    <link rel="stylesheet" href="styles/css/index.css">
+    <link rel="stylesheet" href="styles/css/order.css">
+
+    <!--FUENTES-->
+    <link rel="stylesheet" type="text/css" href="styles/fonts/sansation_bold/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="styles/fonts/sansation_light/stylesheet.css">
+
+    <!--FONT AWESOME-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+
+    <!--JQUERY-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+
+    <script>
+      $(document).ready(function(){
+        $("p").click(function(){
+          $(this).hide();
+        });
+      });
+    </script>
+
+</head>
+<body>
+
+	<!-- BARRA DE NAVEGACIÓN SUPERIOR -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top my-bar">
+    <div class="container">
+
+    	<!-- LOGO Banco TECNOLOGÍA -->
+    	<a class="navbar-brand" href="home.html">
+    		<img src="styles/images/logo3_med.png" id="logo-navbar" class="logo-navbar">
+		</a>
+
+		<!-- BOTÓN COLAPSABLE PARA DISPOSITIVOS MÓVILES -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- ELEMENTOS DE LA BARRA DE NAVEGACIÓN -->
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="home.html">
+              <i class="fa fa-home"></i> Inicio
+            </a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="edc.html">
+              <i class="fa fa-piggy-bank"></i> Estado de Cuenta
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="history.html">
+              <i class="fa fa-history"></i> Historial
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="search.html">
+              <i class="fa fa-search"></i> Búsqueda
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="help.html">
+              <i class="fa fa-question-circle"></i> Preguntas Frecuentes
+            </a>
+          </li>
+          <li class="nav-item">
+            <div class="dropdown btn-profile">
+              <button class="btn dropdown-toggle nav-link" type="button" id="logo-navbar" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fa fa-user-circle"></i> Mi Cuenta
+              </button>
+              <ul class="dropdown-menu my-dropdown">
+                <li class="nav-item">
+                  <a class="nav-link drp-link" href="profile.html">
+                    <i class="fa fa-user"></i> Mi Perfil
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link drp-link" href="info_fiscal.html">
+                    <i class="fa fa-gavel"></i> Inf. Fiscal
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link drp-link" href="config.html">
+                    <i class="fa fa-cog"></i> Configuración
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link drp-link" href="index.html">
+                    <i class="fa fa-sign-out-alt"></i> Cerrar Sesión
+                  </a>
+                </li>                
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav> <!-- FIN BARRA DE NAVEGACIÓN -->
+
+  <!-- Page Content -->
+  <div class="container">
+    <div class="row">
+      
+      <div class="col-lg-12 text-center main-text">
+        <br><br>  
+        <h1 class="mt-5 font1 red-color">Cuentas Claras</h1>
+        <hr>
+        <h2 class="mt-5 font1 red-color subtitle">Estado de Cuenta</h2>
+        <br>
+        <h4 class="font2"><strong id="periodo"></strong><strong> / Integral Select</strong></h4>
+      </div>
+
+      <div class="col-lg-12 supplementary-text text-center">
+        <hr>
+
+        <p id="pSecc"></p>
+        <p>Recuerda que puedes modificar el orden <a href="config.html#conf3">aquí</a>.</p>
+        <br>
+
+        <label id="lblSwitch">Desplegar todo:</label>
+        <label class="switch">
+          <input type="checkbox" name="c1" onclick="colapsar()">
+          <span class="slider round"></span>
+        </label>
+        <br><br>
+
+      </div>
+
+    </div>
+        
+    <div class="row">
+      <div class="col-lg-12 supplementary-text">
+        <div id="accordion">
+
+
+          <!-- SECCIÓN 1: RESUMEN INFORMATIVO -->
+          <div class="card" id="seccion1">
+            <div id="heading1">
+              <h5 class="mb-0 btn-card">
+                <button class="btn btn-block btn-lg collapsed btn-edc" data-toggle="collapse" data-parent="#seccion1" href="#collapse1">
+                  1. Resumen Informativo
+                </button>
+              </h5>
+            </div>
+            <!--<div id="collapse1" class="collapse show" aria-labelledby="heading1" data-parent="#accordion">-->
+            <div id="collapse1" class="collapse" aria-labelledby="heading1" data-parent="#accordion">
+              <div class="card-body cards">
+
+                <hr>
+                <h4 class="text-center letter-spacing font1 red-color-osc"><strong>PRODUCTOS</strong></h4>
+                <hr><br>
+
+                <!-- CUENTA DE CHEQUES -->
+                <div class="producto">
+                  <h5 class="font1">
+                    <a data-toggle="collapse" data-parent="#seccion1" href="#prod1" id="fa1_1" onclick="changeFA('prod1')">
+                       <i class="fa fa-angle-up" id="iprod1"></i> SUPER CUENTA UNIVERSITARIA
+                    </a>
+                  </h5>
+                  <h6 class="font2">60-53978732-0</h6>
+
+                  <div class="producto-detalle collapse show" id="prod1" >
+                    <div class="row">
+                   
+                    <div class="col-lg-4">                        
+                      <table class="table">
+                        <tbody class="text-center">
+                          <tr>
+                            <th class="text-right">Mes Anterior:</th>
+                            <td class="text-left">23,300.77 <br> 100.00%</td>
+                          </tr>
+                          <tr>
+                            <th class="text-right">Mes Actual:</th>
+                            <td class="text-left">25,072.49 <br> 100.00%</td>
+                          </tr>
+                          <tr>
+                            <td class="wdth-cell"></td>
+                            <td></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    
+                    <div class="col-lg-4">                        
+                      <table class="table">
+                        <tbody class="text-center">
+                          <tr>
+                            <th class="text-right">Intereses Brutos:</th>
+                            <td class="text-left">0.00</td>
+                          </tr>
+                          <tr>
+                            <th class="text-right">Comisiones Cobradas:</th>
+                            <td class="text-left">0.00</td>
+                          </tr>
+                          <tr>
+                            <td class="wdth-cell"></td>
+                            <td></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+                    <div class="col-lg-4">                        
+                      <table class="table">
+                        <tbody class="text-center">
+                          <tr>
+                            <th class="text-right">* GAT Nominal:</th>
+                            <td class="text-left">N/A</td>
+                          </tr>
+                          <tr>
+                            <th class="text-right">* GAT Real:</th>
+                            <td class="text-left">N/A</td>
+                          </tr>
+                          <tr>
+                            <td class="wdth-cell"></td>
+                            <td></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+                  </div> <!-- FIN ROW -->
+                  </div> <!-- FIN div producto detalle -->
+                </div> <!-- FIN div producto -->
+
+                <hr>
+
+                <!-- MIS METAS -->
+                <div class="producto">
+                  <h5 class="font1">
+                    <a data-toggle="collapse" data-parent="#seccion1" href="#prod2" id="fa1_2"  onclick="changeFA('prod2')">
+                       <i class="fa fa-angle-up" id="iprod2"></i> MIS METAS - MI AUTOMOVIL
+                    </a>
+                  </h5>
+                  <h6 class="font2">60-53978732-2</h6>
+
+                  <div class="producto-detalle collapse show" id="prod2">
+                    <div class="row">
+                   
+                    <div class="col-lg-4">                        
+                      <table class="table">
+                        <tbody class="text-center">
+                          <tr>
+                            <th class="text-right">Mes Anterior:</th>
+                            <td class="text-left">10,000.02 <br> 9.01%</td>
+                          </tr>
+                          <tr>
+                            <th class="text-right">Mes Actual:</th>
+                            <td class="text-left">12,500.02 <br> 10.46%</td>
+                          </tr>
+                          <tr>
+                            <td class="wdth-cell"></td>
+                            <td></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    
+                    <div class="col-lg-4">
+                      <table class="table">
+                        <tbody class="text-center">
+                          <tr>
+                            <th class="text-right">Intereses Brutos:</th>
+                            <td class="text-left">0.017</td>
+                          </tr>
+                          <tr>
+                            <th class="text-right">Comisiones Cobradas:</th>
+                            <td class="text-left">0.00</td>
+                          </tr>
+                          <tr>
+                            <td class="wdth-cell"></td>
+                            <td></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+                    <div class="col-lg-4">                        
+                      <table class="table">
+                        <tbody class="text-center">
+                          <tr>
+                            <th class="text-right">* GAT Nominal:</th>
+                            <td class="text-left">0.00%</td>
+                          </tr>
+                          <tr>
+                            <th class="text-right">* GAT Real:</th>
+                            <td class="text-left">-3.42%</td>
+                          </tr>
+                          <tr>
+                            <td class="wdth-cell"></td>
+                            <td></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+                  </div> <!-- FIN ROW -->
+                  </div> <!-- FIN div producto detalle -->
+                </div> <!-- FIN div producto -->
+
+                <hr><br>
+
+                <!-- TOTAL -->
+                <div class="producto">
+                  <h4 class="font1 letter-spacing red-color text-center">TOTAL</h4>
+
+                  <div class="producto-total">
+                    <table class="table ">
+                      <thead>
+                      </thead>
+                      <tbody class="bg-total">
+                        <tr>
+                          <th class="text-right wdth-cell-half">MES ANTERIOR:</th>
+                          <td class="text-left">33,300.79 <br> 100.00%</td>
+                        </tr>
+                        <tr>
+                          <th class="text-right wdth-cell-half">MES ACTUAL:</th>
+                          <td class="text-left">37,572.51 <br>100.00%</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div> <!-- FIN div producto detalle -->
+                </div> <!-- FIN div producto --> 
+
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+
+          <!-- SECCIÓN 2: CUENTA DE CHEQUES -->            
+          <div class="card" id="seccion2">
+            <div id="heading2">
+              <h5 class="mb-0 btn-card">
+                <button class="btn btn-block btn-lg collapsed btn-edc" data-toggle="collapse" data-parent="#seccion2" href="#collapse2">
+                  2. Resumen Cuenta de Cheques
+                </button>
+              </h5>
+            </div>
+            <div id="collapse2" class="collapse" aria-labelledby="heading2" data-parent="#accordion">
+              <div class="card-body cards">
+
+
+                <hr>
+                <h4 class="text-center letter-spacing font1 red-color-osc"><strong>PRODUCTOS</strong></h4>
+                <hr><br>
+
+                <!-- CUENTA DE CHEQUES -->
+                <div class="producto">
+                  <h5 class="font1">
+                    <a data-toggle="collapse" data-parent="#seccion2" href="#prod2_1" id="fa2_1" onclick="changeFA('prod2_1')">
+                       <i class="fa fa-angle-up" id="iprod2_1"></i> SUPER CUENTA UNIVERSITARIA
+                    </a>
+                  </h5>
+                  <h6 class="font2">60-53978732-0</h6>
+                  <h6 class="font2">CLABE 014000605397873205</h6>
+
+                  <div class="producto-detalle collapse show" id="prod2_1" >
+                    <div class="row">
+                   
+                      <div class="col-lg-4">                        
+                        <table class="table">
+                          <tbody class="text-center">
+                            <tr>
+                              <th class="text-right">Saldo Promedio:</th>
+                              <td class="text-left">24,638.19</td>
+                            </tr>
+                            <tr>
+                              <th class="text-right">Tasa Bruta de Interés Anual:</th>
+                              <td class="text-left">0.0000%</td>
+                            </tr>
+                            <tr>
+                              <th class="text-right">Días del Periodo:</th>
+                              <td class="text-left">31</td>
+                            </tr>
+                            <tr>
+                              <th class="text-right">Saldo Promedio Mínimo:</th>
+                              <td class="text-left">3,000.00</td>
+                            </tr>
+                            <tr>
+                              <td class="text-right">Corte al:</td>
+                              <td class="text-left">31/12/2018</td>
+                            </tr>
+                            <tr>
+                              <td class="wdth-cell"></td>
+                              <td></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      
+                      <div class="col-lg-4">                      
+                        <table class="table">
+                          <tbody class="text-center">
+                            <tr>
+                              <th class="text-right">Saldo Inicial:</th>
+                              <td class="text-left">23,300.77</td>
+                            </tr>
+                            <tr>
+                              <th class="text-right">+ Depósitos:</th>
+                              <td class="text-left">4,000.00</td>
+                            </tr>
+                            <tr>
+                              <th class="text-right">- Retiros:</th>
+                              <td class="text-left">2,228.28</td>
+                            </tr>
+                            <tr>
+                              <th class="text-right">= Saldo Actual:</th>
+                              <td class="text-left">25,072.49</td>
+                            </tr>
+                            <tr>
+                              <td class="wdth-cell"></td>
+                              <td></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+
+                      <div class="col-lg-4">                        
+                        <table class="table">
+                          <tbody class="text-center">
+                            <tr>
+                              <th class="text-right">+ Intereses Brutos:</th>
+                              <td class="text-left">N/A</td>
+                            </tr>
+                            <tr>
+                              <th class="text-right">- ISR Retenido (.46%):</th>
+                              <td class="text-left">N/A</td>
+                            </tr>
+                            <tr>
+                              <th class="text-right">= Intereses Netos:</th>
+                              <td class="text-left">N/A</td>
+                            </tr>
+                            <tr>
+                              <td colspan="2"></td>
+                            </tr>
+                            <tr>
+                              <th class="text-right">Comisiones Cobradas:</th>
+                              <td class="text-left">N/A</td>
+                            </tr>
+                            <tr>
+                              <td class="wdth-cell"></td>
+                              <td></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+
+                    </div> <!-- FIN ROW -->
+
+                  </div> <!-- FIN div producto detalle -->
+                </div> <!-- FIN div producto -->
+
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+
+
+          <!-- SECCIÓN 3: MIS METAS Banco -->
+          <div class="card" id="seccion3">
+            <div id="heading3">
+              <h5 class="mb-0 btn-card">
+                <button class="btn btn-block btn-lg collapsed btn-edc" data-toggle="collapse" data-parent="#seccion3" href="#collapse3">
+                  3. Resumen Mis Metas Banco
+                </button>
+              </h5>
+            </div>
+            <div id="collapse3" class="collapse" aria-labelledby="heading3" data-parent="#accordion">
+              <div class="card-body cards">
+                
+                <hr>
+                <h4 class="text-center letter-spacing font1 red-color-osc"><strong>PRODUCTOS</strong></h4>
+                <hr><br>
+
+                <div class="producto">
+                  <h5 class="font1">
+                    <a data-toggle="collapse" data-parent="#seccion3" href="#prod3_1" id="fa3_1" onclick="changeFA('prod3_1')">
+                       <i class="fa fa-angle-up" id="iprod3_1"></i> MIS METAS - MI AUTOMOVIL
+                    </a>
+                  </h5>
+                  <h6 class="font2">60-53978732-2</h6>
+
+                  <div class="producto-detalle collapse show" id="prod3_1" >
+                    
+                    <div class="row">
+                   
+                      <div class="col-lg-4">                        
+                        <table class="table">
+                          <tbody class="text-center">
+                            <tr>
+                              <th class="text-right">Saldo Promedio:</th>
+                              <td class="text-left">10,000.02</td>
+                            </tr>
+                            <tr>
+                              <td colspan="2"><br></td>
+                            </tr>
+                            <tr>
+                              <th class="text-right">Días del Periodo:</th>
+                              <td class="text-left">31</td>
+                            </tr>
+                            <tr>
+                              <td class="text-right">Corte al:</td>
+                              <td class="text-left">31/12/2018</td>
+                            </tr>
+                            <tr>
+                              <td class="wdth-cell"></td>
+                              <td></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      
+                      <div class="col-lg-4">                        
+                        <table class="table">
+                          <tbody class="text-center">
+                            <tr>
+                              <th class="text-right">Saldo Inicial:</th>
+                              <td class="text-left">10,000.02 </td>
+                            </tr>
+                            <tr>
+                              <th class="text-right">+ Depósitos:</th>
+                              <td class="text-left">2,500.00</td>
+                            </tr>
+                            <tr>
+                              <th class="text-right">- Retiros:</th>
+                              <td class="text-left">0.00</td>
+                            </tr>
+                            <tr>
+                              <th class="text-right">= Saldo Actual:</th>
+                              <td class="text-left">12.500.02</td>
+                            </tr>
+                            <tr>
+                              <td class="wdth-cell"></td>
+                              <td></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+
+                      <div class="col-lg-4">                        
+                        <table class="table">
+                          <tbody class="text-center">
+                            <tr>
+                              <th class="text-right">* GAT Nominal 0.00%:</th>
+                              <td class="text-left">N/A</td>
+                            </tr>
+                            <tr>
+                              <th class="text-right">* GAT Real -3.41%:</th>
+                              <td class="text-left">N/A</td>
+                            </tr>
+                            <tr>
+                              <th class="text-right">+ Intereses Brutos:</th>
+                              <td class="text-left">0.17</td>
+                            </tr>
+                            <tr>
+                              <th class="text-right">- I.S.R. Retenido (.58%):</th>
+                              <td class="text-left">N/A</td>
+                            </tr>
+                            <tr>
+                              <th class="text-right">= Intereses Netos:</th>
+                              <td class="text-left">0.17</td>
+                            </tr>
+                            <tr>  
+                              <td style="width: 210px"></td>
+                              <td></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+
+                    </div> <!-- FIN ROW --> 
+
+                  </div> <!-- FIN div producto detalle -->
+                </div> <!-- FIN div producto -->
+              </div>
+            </div>
+          </div>
+
+
+
+
+          <!-- SECCIÓN 4: DETALLE DE MOVIMIENTOS CUENTA DE CHEQUES -->
+          <div class="card" id="seccion4">
+            <div id="heading4">
+              <h5 class="mb-0 btn-card">
+                <button class="btn btn-block btn-lg collapsed btn-edc" data-toggle="collapse" data-parent="#seccion4" href="#collapse4">
+                  4. Detalle de Movimientos Cuenta de Cheques
+                </button>
+              </h5>
+            </div>
+            <div id="collapse4" class="collapse" aria-labelledby="heading4" data-parent="#accordion">
+              <div class="card-body cards">
+
+                <hr>
+                <h4 class="text-center letter-spacing font1 red-color-osc"><strong>PRODUCTOS</strong></h4>
+                <hr><br>
+
+                <div class="producto">
+                  <h5 class="font1">
+                    <a data-toggle="collapse" data-parent="#seccion4" href="#prod4_1" id="fa4_1"  onclick="changeFA('prod4_1')">
+                       <i class="fa fa-angle-up" id="iprod4_1"></i> SUPER CUENTA UNIVERSITARIA
+                    </a>
+                  </h5>
+                  <h6 class="font2">60-53978732-0</h6>
+                  <h6 class="font2">CLABE 014000605397873205</h6>
+                  <br>
+
+                  <div class="producto-mov collapse show" id="prod4_1" >
+                    <table class="table table-sm table-hover table-bordered">
+                      <thead>
+                        <tr class="text-center">
+                          <th>FECHA</th>
+                          <th>FOLIO</th>
+                          <th>DESCRIPCIÓN</th>
+                          <th>DEPÓSITOS</th>
+                          <th>RETIROS</th>
+                          <th>SALDO</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>3/12/18</td>
+                          <td>0000000</td>
+                          <td>Retención ISR 30/11/18 al 1/12/18</td>
+                          <td>-</td>
+                          <td>0.19</td>
+                          <td>20,658.18</td>
+                        </tr>
+                        <tr>
+                          <td>3/12/18</td>
+                          <td>0000000</td>
+                          <td>Cargo Mis Metas</td>
+                          <td>-</td>
+                          <td>100.00</td>
+                          <td>20,558.18</td>
+                        </tr>
+                        <tr>
+                          <td>4/12/18</td>
+                          <td>0000000</td>
+                          <td>ABO por intereses del periodo 01/12/18 al 03/12/18</td>
+                          <td>25.09</td>
+                          <td>-</td>
+                          <td>20,583.27</td>
+                        </tr>
+                        <tr>
+                          <td>6/12/18</td>
+                          <td>0000000</td>
+                          <td>Retención ISR 01/12/18 al 06/12/18</td>
+                          <td>-</td>
+                          <td>0.19</td>
+                          <td>20,658.18</td>
+                        </tr>
+                        <tr>
+                          <td>12/12/18</td>
+                          <td>0000000</td>
+                          <td>Abono Mis Metas 60-53978732-2</td>
+                          <td>1.82</td>
+                          <td>-</td>
+                          <td>20,560.00</td>
+                        </tr>
+                        <tr>
+                          <td>19/12/18</td>
+                          <td>0000000</td>
+                          <td>Abono Mis Metas 60-53978732-2</td>
+                          <td>100.00</td>
+                          <td>-</td>
+                          <td>20,660.00</td>
+                        </tr>
+                        <tr>
+                          <td>20/12/18</td>
+                          <td>0000000</td>
+                          <td>Retención ISR 30/11/18 al 1/12/18</td>
+                          <td>-</td>
+                          <td>0.19</td>
+                          <td>20,658.18</td>
+                        </tr>
+                        <tr>
+                          <td>23/12/18</td>
+                          <td>0000000</td>
+                          <td>Cargo Mis Metas</td>
+                          <td>-</td>
+                          <td>100.00</td>
+                          <td>20,558.18</td>
+                        </tr>
+                        <tr>
+                          <td>24/12/18</td>
+                          <td>0000000</td>
+                          <td>ABO por intereses del periodo 01/12/18 al 03/12/18</td>
+                          <td>25.09</td>
+                          <td>-</td>
+                          <td>20,583.27</td>
+                        </tr>
+                        <tr>
+                          <td>28/12/18</td>
+                          <td>0000000</td>
+                          <td>Retención ISR 01/12/18 al 06/12/18</td>
+                          <td>-</td>
+                          <td>0.19</td>
+                          <td>20,658.18</td>
+                        </tr>
+                        <tr>
+                          <td>29/12/18</td>
+                          <td>0000000</td>
+                          <td>Abono Mis Metas 60-53978732-2</td>
+                          <td>1.82</td>
+                          <td>-</td>
+                          <td>20,560.00</td>
+                        </tr>
+                        <tr>
+                          <td>31/12/18</td>
+                          <td>0000000</td>
+                          <td>Abono Mis Metas 60-53978732-2</td>
+                          <td>100.00</td>
+                          <td>-</td>
+                          <td>20,660.00</td>
+                        </tr>
+                        <tr>
+                          <td>3/12/18</td>
+                          <td>0000000</td>
+                          <td>Retención ISR 30/11/18 al 1/12/18</td>
+                          <td>-</td>
+                          <td>0.19</td>
+                          <td>20,658.18</td>
+                        </tr>
+                        <tr>
+                          <td>3/12/18</td>
+                          <td>0000000</td>
+                          <td>Cargo Mis Metas</td>
+                          <td>-</td>
+                          <td>100.00</td>
+                          <td>20,558.18</td>
+                        </tr>
+                        <tr>
+                          <td>4/12/18</td>
+                          <td>0000000</td>
+                          <td>ABO por intereses del periodo 01/12/18 al 03/12/18</td>
+                          <td>25.09</td>
+                          <td>-</td>
+                          <td>20,583.27</td>
+                        </tr>
+                        <tr>
+                          <td>6/12/18</td>
+                          <td>0000000</td>
+                          <td>Retención ISR 01/12/18 al 06/12/18</td>
+                          <td>-</td>
+                          <td>0.19</td>
+                          <td>20,658.18</td>
+                        </tr>
+                        <tr>
+                          <td>12/12/18</td>
+                          <td>0000000</td>
+                          <td>Abono Mis Metas 60-53978732-2</td>
+                          <td>1.82</td>
+                          <td>-</td>
+                          <td>20,560.00</td>
+                        </tr>
+                        <tr>
+                          <td>19/12/18</td>
+                          <td>0000000</td>
+                          <td>Abono Mis Metas 60-53978732-2</td>
+                          <td>100.00</td>
+                          <td>-</td>
+                          <td>20,660.00</td>
+                        </tr>
+                        <tr>
+                          <td>20/12/18</td>
+                          <td>0000000</td>
+                          <td>Retención ISR 30/11/18 al 1/12/18</td>
+                          <td>-</td>
+                          <td>0.19</td>
+                          <td>20,658.18</td>
+                        </tr>
+                        <tr>
+                          <td>23/12/18</td>
+                          <td>0000000</td>
+                          <td>Cargo Mis Metas</td>
+                          <td>-</td>
+                          <td>100.00</td>
+                          <td>20,558.18</td>
+                        </tr>
+                        <tr>
+                          <td>24/12/18</td>
+                          <td>0000000</td>
+                          <td>ABO por intereses del periodo 01/12/18 al 03/12/18</td>
+                          <td>25.09</td>
+                          <td>-</td>
+                          <td>20,583.27</td>
+                        </tr>
+                        <tr>
+                          <td>28/12/18</td>
+                          <td>0000000</td>
+                          <td>Retención ISR 01/12/18 al 06/12/18</td>
+                          <td>-</td>
+                          <td>0.19</td>
+                          <td>20,658.18</td>
+                        </tr>
+                        <tr>
+                          <td>29/12/18</td>
+                          <td>0000000</td>
+                          <td>Abono Mis Metas 60-53978732-2</td>
+                          <td>1.82</td>
+                          <td>-</td>
+                          <td>20,560.00</td>
+                        </tr>
+                        <tr>
+                          <td>31/12/18</td>
+                          <td>0000000</td>
+                          <td>Abono Mis Metas 60-53978732-2</td>
+                          <td>100.00</td>
+                          <td>-</td>
+                          <td>20,660.00</td>
+                        </tr>
+                      </tbody>
+                      <tfoot>
+                        <tr class="bg-total">
+                          <th colspan="3" class="letter-spacing text-right"><h5>TOTAL:</h5></th>
+                          <th class="bl"><h5>692.16</h5></th>
+                          <th class="bl"><h5>107.53</h5></th>
+                          <th class="bl"><h5>21,234.63</h5></th>
+                        </tr>
+                      </tfoot>
+                    </table>
+                  </div> <!-- FIN div producto detalle -->
+                </div> <!-- FIN div producto -->
+
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+
+          <!-- SECCIÓN 5: DETALLE DE MOVIMIENTOS MIS METAS Banco -->
+          <div class="card" id="seccion5">
+            <div id="heading5">
+              <h5 class="mb-0 btn-card">
+                <button class="btn btn-block btn-lg collapsed btn-edc" data-toggle="collapse" data-parent="#seccion5" href="#collapse5">
+                  5. Detalle de Movimientos Mis Metas Banco
+                </button>
+              </h5>
+            </div>
+            <div id="collapse5" class="collapse" aria-labelledby="heading5" data-parent="#accordion">
+              <div class="card-body cards">
+
+                
+                <hr>
+                <h4 class="text-center letter-spacing font1 red-color-osc"><strong>PRODUCTOS</strong></h4>
+                <hr><br>
+
+                <div class="producto">
+                  <h5 class="font1">
+                    <a data-toggle="collapse" data-parent="#seccion4" href="#prod5_1" id="fa5_1" onclick="changeFA('prod5_1')">
+                       <i class="fa fa-angle-up" id="iprod5_1"></i> MIS METAS - MI AUTOMOVIL
+                    </a>
+                  </h5>
+                  <h6 class="font2">60-53978732-2</h6>
+
+                  <div class="producto-mov collapse show" id="prod5_1" >
+                    <table class="table table-sm table-hover table-bordered">
+                      <thead>
+                        <tr class="text-center">
+                          <th>FECHA</th>
+                          <th class="bl">FOLIO</th>
+                          <th class="bl">DESCRIPCIÓN</th>
+                          <th class="bl">DEPÓSITOS</th>
+                          <th class="bl">RETIROS</th>
+                          <th class="bl">SALDO</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>3/12/18</td>
+                          <td>0000000</td>
+                          <td>Retención ISR 30/11/18 al 1/12/18</td>
+                          <td>-</td>
+                          <td>0.19</td>
+                          <td>20,658.18</td>
+                        </tr>
+                        <tr>
+                          <td>3/12/18</td>
+                          <td>0000000</td>
+                          <td>Cargo Mis Metas</td>
+                          <td>-</td>
+                          <td>100.00</td>
+                          <td>20,558.18</td>
+                        </tr>
+                        <tr>
+                          <td>4/12/18</td>
+                          <td>0000000</td>
+                          <td>ABO por intereses del periodo 01/12/18 al 03/12/18</td>
+                          <td>25.09</td>
+                          <td>-</td>
+                          <td>20,583.27</td>
+                        </tr>
+                        <tr>
+                          <td>6/12/18</td>
+                          <td>0000000</td>
+                          <td>Retención ISR 01/12/18 al 06/12/18</td>
+                          <td>-</td>
+                          <td>0.19</td>
+                          <td>20,658.18</td>
+                        </tr>
+                        <tr>
+                          <td>12/12/18</td>
+                          <td>0000000</td>
+                          <td>Abono Mis Metas 60-53978732-2</td>
+                          <td>1.82</td>
+                          <td>-</td>
+                          <td>20,560.00</td>
+                        </tr>
+                        <tr>
+                          <td>19/12/18</td>
+                          <td>0000000</td>
+                          <td>Abono Mis Metas 60-53978732-2</td>
+                          <td>100.00</td>
+                          <td>-</td>
+                          <td>20,660.00</td>
+                        </tr>
+                        <tr>
+                          <td>20/12/18</td>
+                          <td>0000000</td>
+                          <td>Retención ISR 30/11/18 al 1/12/18</td>
+                          <td>-</td>
+                          <td>0.19</td>
+                          <td>20,658.18</td>
+                        </tr>
+                        <tr>
+                          <td>23/12/18</td>
+                          <td>0000000</td>
+                          <td>Cargo Mis Metas</td>
+                          <td>-</td>
+                          <td>100.00</td>
+                          <td>20,558.18</td>
+                        </tr>
+                        <tr>
+                          <td>24/12/18</td>
+                          <td>0000000</td>
+                          <td>ABO por intereses del periodo 01/12/18 al 03/12/18</td>
+                          <td>25.09</td>
+                          <td>-</td>
+                          <td>20,583.27</td>
+                        </tr>
+                        <tr>
+                          <td>28/12/18</td>
+                          <td>0000000</td>
+                          <td>Retención ISR 01/12/18 al 06/12/18</td>
+                          <td>-</td>
+                          <td>0.19</td>
+                          <td>20,658.18</td>
+                        </tr>
+                        <tr>
+                          <td>29/12/18</td>
+                          <td>0000000</td>
+                          <td>Abono Mis Metas 60-53978732-2</td>
+                          <td>1.82</td>
+                          <td>-</td>
+                          <td>20,560.00</td>
+                        </tr>
+                        <tr>
+                          <td>31/12/18</td>
+                          <td>0000000</td>
+                          <td>Abono Mis Metas 60-53978732-2</td>
+                          <td>100.00</td>
+                          <td>-</td>
+                          <td>20,660.00</td>
+                        </tr>
+                      </tbody>
+                      <tfoot>
+                        <tr class="bg-total">
+                          <th colspan="3" class="letter-spacing text-right"><h5>TOTAL:</h5></th>
+                          <th class="bl"><h5>692.16</h5></th>
+                          <th class="bl"><h5>107.53</h5></th>
+                          <th class="bl"><h5>21,234.63</h5></th>
+                        </tr>
+                      </tfoot>
+                    </table>
+                  </div> <!-- FIN div producto detalle -->
+                </div> <!-- FIN div producto -->
+
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </div> <!-- FIN row -->
+
+
+  </div> <!-- FIN Page Content -->
+
+  <br><br><br>
+
+
+  <!--FOOTER-->
+  <div class="footer">
+    <br><br>
+
+    <img src="styles/images/logo.png" id="logo-fppter" class="logo-footer">
+
+    <p>
+      <br>Banco Banco (México) S.A., Institución de Banca Múltiple, 
+      <br> 
+      Grupo Financiero Banco México, R.F.C. BSM970519DU8.
+    </p>
+    <p>
+      Prolongación Paseo de la Reforma no. 500 piso 2 mod. 206, 
+      <br>
+      Col. Lomas de Santa Fe, Delegación Álvaro Obregón, C.P. 01219, Ciudad de México.
+    </p>
+
+    <br>
+
+    <p>
+      Agradeceremos nos comunique sus objeciones en un plazo de 90 días, 
+      <br>
+      de lo contrario consideraremos su conformidad.
+    </p>
+
+    <br>
+  </div>
+
+  <!-- BOOTSTRAP JS -->
+  <script src="styles/jquery/jquery.min.js"></script>
+  <script src="styles/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+  <!-- JAVASCRIPT -->
+  <script>
+    var posUno;
+    var posDos;
+    var posTres;
+    var posCuatro;
+    var posCinco;
+
+    setPeriodo();
+    getPosiciones();
+    setOrden();
+    msjOrder();
+
+
+
+    function setPeriodo(){
+      var monthNames = ["Enero", "Febrero", "Marzo", "Abril", "MAyo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+      var today = new Date();
+      var yyyy = today.getFullYear();
+
+      document.getElementById("periodo").innerHTML = (monthNames[today.getMonth()-1] + " " + yyyy);
+    }
+
+
+    function getPosiciones(){
+      if (sessionStorage.getItem("posUno") === null) {
+        //posicion por default
+        posUno = 1;
+      } else{
+        posUno = sessionStorage.getItem("posUno");        
+      }
+      if (sessionStorage.getItem("posDos") === null) {
+        //posicion por default
+        posDos = 2;
+      } else{
+        posDos = sessionStorage.getItem("posDos");        
+      }
+      if (sessionStorage.getItem("posTres") === null) {
+        //posicion por default
+        posTres = 3;
+      } else{
+        posTres = sessionStorage.getItem("posTres");        
+      }
+      if (sessionStorage.getItem("posCuatro") === null) {
+        //posicion por default
+        posCuatro = 4;
+      } else{
+        posCuatro = sessionStorage.getItem("posCuatro");        
+      }
+      if (sessionStorage.getItem("posCinco") === null) {
+        //posicion por default
+        posCinco = 5;
+      } else{
+        posCinco = sessionStorage.getItem("posCinco");        
+      }     
+    }
+
+
+    function setOrden(){
+      document.getElementById("seccion" + posUno).style.order = 1;
+      document.getElementById("seccion" + posDos).style.order = 2;
+      document.getElementById("seccion" + posTres).style.order = 3;
+      document.getElementById("seccion" + posCuatro).style.order = 4;
+      document.getElementById("seccion" + posCinco).style.order = 5;
+    }
+
+
+
+    function msjOrder(){
+      if (sessionStorage.getItem("posUno") === null) {
+        document.getElementById("pSecc").innerHTML = ("El orden de las secciones de tu Estado de Cuenta está definido por defecto.");
+      } else{
+        document.getElementById("pSecc").innerHTML = ("El orden de las secciones de tu Estado de Cuenta está definido en base a las preferencias que guardaste.");
+      }
+    }
+
+
+
+    function colapsar(){
+      var checkbox = document.getElementsByName("c1");  
+      var element1 = document.getElementById("collapse1");
+      var element2 = document.getElementById("collapse2");
+      var element3 = document.getElementById("collapse3");
+      var element4 = document.getElementById("collapse4");
+      var element5 = document.getElementById("collapse5");
+
+      var prod1_1 = document.getElementById("prod1");
+      var prod1_2 = document.getElementById("prod2");
+      var prod2_1 = document.getElementById("prod2_1");
+      var prod3_1 = document.getElementById("prod3_1");
+      var prod4_1 = document.getElementById("prod4_1");
+      var prod5_1 = document.getElementById("prod5_1");
+
+      var estado = "off";
+
+      for(var i=0;i<checkbox.length;i++) { 
+          if(checkbox[i].checked){
+            estado = "on";
+              break;
+          }
+      }
+
+      if (estado == "on") {
+        document.getElementById("lblSwitch").innerHTML = ("Colapsar todo:");
+        element1.classList.add("show");
+        element2.classList.add("show");
+        element3.classList.add("show");
+        element4.classList.add("show");
+        element5.classList.add("show");
+
+        prod1_1.classList.add("show");
+        prod1_2.classList.add("show");
+        prod2_1.classList.add("show");
+        prod3_1.classList.add("show");
+        prod4_1.classList.add("show");
+        prod5_1.classList.add("show");
+      } else {
+        document.getElementById("lblSwitch").innerHTML = ("Desplegar todo:");
+        element1.classList.remove("show");
+        element2.classList.remove("show");
+        element3.classList.remove("show");
+        element4.classList.remove("show");
+        element5.classList.remove("show");
+
+        prod1_1.classList.remove("show");
+        prod1_2.classList.remove("show");
+        prod2_1.classList.remove("show");
+        prod3_1.classList.remove("show");
+        prod4_1.classList.remove("show");
+        prod5_1.classList.remove("show");
+      }
+    }
+
+
+    function changeFA(x){
+      var id = x;
+      var idHijo = "i" + x;
+
+      var elem = document.getElementById(id); 
+      var elemHijo = document.getElementById(idHijo);
+      
+      var estadoFa = "";
+
+      if (elem.classList.contains("show") == true) {
+        estadoFa = "on";
+      } else{
+        estadoFa = "off";
+      }
+      
+      if (estadoFa == "on") {
+        elem.classList.add("show");
+        elemHijo.classList.remove("fa-angle-up");
+        elemHijo.classList.add("fa-angle-down");
+      } else if (estadoFa == "off") {
+        elem.classList.remove("show");          
+        elemHijo.classList.remove("fa-angle-down");
+        elemHijo.classList.add("fa-angle-up");
+      }
+ 
+    }
+
+  </script>
+
+</body>
+</html>

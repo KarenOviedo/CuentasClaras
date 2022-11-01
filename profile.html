@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cuentas Claras - Mi Perfil</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Cuentas Claras para Banco Tecnología">
+    <meta name="author" content="Karen Oviedo">
+
+     <!-- Favicon -->
+    <link rel="shortcut icon" type="image/png" href="styles/images/favicon.png"/>
+
+	 <!--BOOTSTRAP CSS-->
+    <link rel="stylesheet" href="styles/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="styles/bootstrap/css/bootstrap.min.css">
+
+    <!--HOJAS DE ESTILOS-->
+    <link rel="stylesheet" href="styles/css/index.css">
+
+    <!--FUENTES-->
+    <link rel="stylesheet" type="text/css" href="styles/fonts/sansation_bold/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="styles/fonts/sansation_light/stylesheet.css">
+
+    <!--FONT AWESOME-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+
+</head>
+<body>
+
+	<!-- BARRA DE NAVEGACIÓN SUPERIOR -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top my-bar">
+      <div class="container">
+
+      	<!-- LOGO Banco TECNOLOGÍA -->
+      	<a class="navbar-brand" href="home.html">
+      		<img src="styles/images/logo3_med.png" id="logo-navbar" class="logo-navbar">
+  		</a>
+
+  		<!-- BOTÓN COLAPSABLE PARA DISPOSITIVOS MÓVILES -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- ELEMENTOS DE LA BARRA DE NAVEGACIÓN -->
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="home.html">
+                <i class="fa fa-home"></i> Inicio
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="edc.html">
+                <i class="fa fa-piggy-bank"></i> Estado de Cuenta
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="history.html">
+                <i class="fa fa-history"></i> Historial
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="search.html">
+                <i class="fa fa-search"></i> Búsqueda
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="help.html">
+                <i class="fa fa-question-circle"></i> Preguntas Frecuentes
+              </a>
+            </li>
+            <li class="btn-profile-active">
+              <div class="dropdown btn-profile">
+                <button class="btn dropdown-toggle " type="button" id="logo-navbar" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="fa fa-user-circle"></i> Mi Cuenta
+                </button>
+                <ul class="dropdown-menu my-dropdown">
+                  <li class="nav-item active">
+                    <a class="nav-link  drp-link" href="profile.html">
+                      <i class="fa fa-user"></i> Mi Perfil
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link drp-link" href="info_fiscal.html">
+                      <i class="fa fa-gavel"></i> Inf. Fiscal
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link  drp-link" href="config.html">
+                      <i class="fa fa-cog"></i> Configuración
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link  drp-link" href="index.html">
+                      <i class="fa fa-sign-out-alt"></i> Cerrar Sesión
+                    </a>
+                  </li>                
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav> <!-- FIN BARRA DE NAVEGACIÓN -->
+
+    <!-- Page Content -->
+    <div class="container">
+
+      <div class="row"> <!--Encabezado de Sección-->
+        <div class="col-lg-12 text-center main-text">
+          <br><br>
+          
+          <h1 class="mt-5 font1 red-color">Cuentas Claras</h1>
+          <hr>
+          <h2 class="mt-5 font1 red-color subtitle">Datos del Cliente</h2>
+        </div>
+
+        <div class="col-lg-1"></div>
+        <div class="col-lg-10 supplementary-text text-center">
+          <hr>  
+        </div>
+      </div> <!--Fin Encabezade de Sección-->
+
+
+      <!-- Contenido de Sección -->
+      <div class="row">
+
+        <!-- Separador -->
+        <div class="col-lg-1"></div>
+
+        <!-- Foto de Perfil -->
+        <div class="col-lg-3 text-center">
+          <div class=>
+            <img src="styles/images/perfil3.png" class="profile-pic">
+            <br><br>
+            <h2 class="font1 red-color"><strong>Oviedo Aguilar</strong></h2>
+            <h3 class="font2 red-color"><strong>Karen Elena</strong></h3>
+            <br>
+          </div>
+        </div>
+
+        <!-- Contenido del Perfil -->
+        <div class="col-lg-7 text-justify">
+
+          <table class="table table-bordered tab-profile">
+            <thead>
+              <tr>
+                <th class="text-center letter-spacing tab-profile-th">DATOS ADMINISTRATIVOS</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <div id="domicilio1"></div>
+                  <div id="domicilio2"></div>
+                  <div id="domicilio3"></div><br>
+                  C.P. 000000 <label class="sep"></label> C.R. 000000 <label class="sep"></label> E00000000 <br>
+                  <img src="styles/images/barcode.png" id="logo-fppter" class="barcode"><br>
+                  1218017143851682640001 <br><br>
+                  <strong>Folio:</strong> 0073980
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <br>
+
+          <table class="table table-bordered tab-profile">
+            <thead>
+              <tr>
+                <th class="text-center letter-spacing tab-profile-th">DATOS BANCARIOS</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <strong>Código de Cliente:</strong> 00000000<br>
+                  <strong>R.F.C.:</strong> OIAK000000N00<br><br>
+                  <strong>Moneda:</strong> Moneda Nacional<br>
+                  <strong>Sucursal:</strong> 0000<br>
+                  <strong>Teléfono:</strong> 51-69-43-00 (CDMX) o Lada 0155 51-69-43-00<br><br>
+                  <strong>Periodo:</strong> 01 Al <a id="periodoDays"></a> de <a id="periodo"></a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          
+        </div>
+      </div>
+
+
+    </div>
+
+    <br><br><br>
+
+
+    <!--FOOTER-->
+    <div class="footer">
+    	<br><br>
+
+    	<img src="styles/images/logo.png" id="logo-fppter" class="logo-footer">
+
+    	<p>
+    		<br>Banco Banco (México) S.A., Institución de Banca Múltiple, 
+    		<br> 
+    		Grupo Financiero Banco México, R.F.C. BSM970519DU8.
+    	</p>
+    	<p>
+    		Prolongación Paseo de la Reforma no. 500 piso 2 mod. 206, 
+    		<br>
+    		Col. Lomas de Santa Fe, Delegación Álvaro Obregón, C.P. 01219, Ciudad de México.
+    	</p>
+
+    	<br>
+
+    	<p>
+    		Agradeceremos nos comunique sus objeciones en un plazo de 90 días, 
+    		<br>
+    		de lo contrario consideraremos su conformidad.
+    	</p>
+
+    	<br>
+    </div>
+
+    <!-- BOOTSTRAP JS -->
+    <script src="styles/jquery/jquery.min.js"></script>
+    <script src="styles/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JAVASCRIPT -->
+    <!--DATA FILE-->
+    <script type="text/javascript" src="data.js"></script>
+
+
+    <script>
+      function daysInMonth (month, year) {
+        return new Date(year, month, 0).getDate();
+      }
+
+
+      var monthNames = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+      var today = new Date();
+      var yyyy = today.getFullYear();
+      var mes = today.getMonth();
+      //var mes = 0;
+      var dias;
+
+      if (mes == 0) {
+        // Si es Enero (mes 0), se muestra el periodo del mes anterior: Diciembre (mes 11) del año actual-1.
+        document.getElementById("periodo").innerHTML = (monthNames[11] + " " + (yyyy-1));
+        dias = daysInMonth(12,yyyy-1);
+      } else{
+        document.getElementById("periodo").innerHTML = (monthNames[mes-1] + " " + yyyy);
+        dias = daysInMonth(mes,yyyy);
+      }
+
+      document.getElementById("periodoDays").innerHTML = dias;
+
+
+
+      var localstrDomicilio1 = sessionStorage.getItem("strDomicilio1"); 
+      var localstrDomicilio2 = sessionStorage.getItem("strDomicilio2"); 
+      var localstrDomicilio3 = sessionStorage.getItem("strDomicilio3"); 
+      
+
+      if (localstrDomicilio1 === null) {
+        document.getElementById("domicilio1").innerHTML = "Damianas 1020"
+      } else{
+        document.getElementById("domicilio1").innerHTML = localstrDomicilio1;
+      }
+
+      if (localstrDomicilio2 === null) {
+        document.getElementById("domicilio2").innerHTML = "Independencia, Guadalajara"
+      } else{
+        document.getElementById("domicilio2").innerHTML = localstrDomicilio2;
+      }
+
+      if (localstrDomicilio3 === null) {
+        document.getElementById("domicilio3").innerHTML = "Guadalajara, Jalisco"
+      } else{
+        document.getElementById("domicilio3").innerHTML = localstrDomicilio3;
+      }
+
+
+    </script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cuentas Claras - Inicio de Sesión</title>
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Cuentas Claras para Banco Tecnología">
+    <meta name="author" content="Karen Oviedo">
+
+     <!-- Favicon -->
+    <link rel="shortcut icon" type="image/png" href="styles/images/favicon.png"/>
+
+  <!--BOOTSTRAP CSS-->
+    <link rel="stylesheet" href="styles/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="styles/bootstrap/css/bootstrap.min.css">
+
+    <!--HOJAS DE ESTILOS-->
+    <link rel="stylesheet" href="styles/css/index.css">
+
+    <!--FUENTES-->
+    <link rel="stylesheet" type="text/css" href="styles/fonts/sansation_bold/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="styles/fonts/sansation_light/stylesheet.css">
+
+    <!--FONT AWESOME-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+
+</head>
+<body style="background: url('styles/images/bg.jpg') no-repeat center right fixed; background-size: cover;">
+
+    <!-- Page Content -->
+    <div class="row login align-self-center">
+      <div class="col-lg-5 text-center main-text">
+        
+        
+        <h1 class="mt-5 font1 red-color">Cuentas Claras</h1>
+        <hr>
+        <h3 class="mt-5 font1 red-color subtitle">Inicio de Sesión</h3>
+        <br><br>
+        <form class="form-signin" id="formLogin">
+          <div class="form-label-group">
+            <input type="text" id="inputCodCliente" class="form-control" placeholder="Código de Cliente / No. Tarjeta / No. de Cuenta" required autofocus>
+          </div>
+          <br>
+          <div class="form-label-group">
+            <input type="password" id="inputPassword" class="form-control" placeholder="Contraseña" required>
+          </div>
+          <br>
+          <label class="containerCB">Recordar Usuario
+            <input type="checkbox" id="customCheck1">
+            <span class="checkmark"></span>
+          </label>
+          <br><br><br>
+          <button class="btn btn-lg btn-block text-uppercase" id="btnLogin" onclick="login()">Entrar</button>
+        </form>
+        <br>
+      </div>
+    </div>
+
+    <div class="footer-login">
+      <p>Made with <i class="fa fa-heart"></i> by Karen Oviedo.</p>
+    </div>
+
+
+    <!-- BOOTSTRAP JS -->
+    <script src="styles/jquery/jquery.min.js"></script>
+    <script src="styles/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JAVASCRIPT -->
+
+    <!--DATA FILE-->
+    <script type="text/javascript" src="data.js"></script>
+
+    <script>
+
+      var bandera;
+
+      //Set valor de la bandera si está vacío
+      if (sessionStorage.getItem("bandera") === null) {
+        bandera = "false";
+      } else{
+        bandera = sessionStorage.getItem("bandera");
+      }
+  
+      
+      if (bandera === "true") {
+        document.getElementById("customCheck1").checked = true;
+        document.getElementById("inputCodCliente").value = "1234";
+      } else{
+        document.getElementById("customCheck1").checked = false;
+        document.getElementById("inputCodCliente").value = "";   
+      }
+
+
+      function login(){
+
+        if (document.getElementById("customCheck1").checked === true) {
+          sessionStorage.setItem("bandera", "true");
+        } else{
+          sessionStorage.setItem("bandera", "false");
+        }
+
+        var localPass = sessionStorage.getItem("pass"); 
+        //alert(localPass);
+        var thisPass = document.getElementById("inputPassword").value;
+        var password;
+        
+        if (localPass === null) {
+          password = pass; //1234
+        } else{
+          password = localPass;
+        }
+
+        if (thisPass != "") {
+          if (thisPass == password) {
+            document.getElementById("formLogin").action = "home.html";
+            location.href = 'home.html';
+          } else{
+            alert("Contraseña incorrecta. (intenta con 1234)");
+          }
+        }
+      }
+
+
+      
+    </script>
+
+</body>
+</html>

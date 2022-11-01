@@ -1,0 +1,1890 @@
+  <!DOCTYPE html>
+<html>
+<head>
+  <title>Cuentas Claras - Búsqueda</title>
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Cuentas Claras para Banco Tecnología">
+    <meta name="author" content="Karen Oviedo">
+
+     <!-- Favicon -->
+    <link rel="shortcut icon" type="image/png" href="styles/images/favicon.png"/>
+
+  <!--BOOTSTRAP CSS-->
+    <link rel="stylesheet" href="styles/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="styles/bootstrap/css/bootstrap.min.css">
+
+    <!--HOJAS DE ESTILOS-->
+    <link rel="stylesheet" href="styles/css/index.css">
+
+    <!--FUENTES-->
+    <link rel="stylesheet" type="text/css" href="styles/fonts/sansation_bold/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="styles/fonts/sansation_light/stylesheet.css">
+
+    <!--FONT AWESOME-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+
+</head>
+<body>
+
+  <!-- BARRA DE NAVEGACIÓN SUPERIOR -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top my-bar">
+      <div class="container">
+
+        <!-- LOGO Banco TECNOLOGÍA -->
+        <a class="navbar-brand" href="home.html">
+          <img src="styles/images/logo3_med.png" id="logo-navbar" class="logo-navbar">
+      </a>
+
+      <!-- BOTÓN COLAPSABLE PARA DISPOSITIVOS MÓVILES -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- ELEMENTOS DE LA BARRA DE NAVEGACIÓN -->
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="home.html">
+                <i class="fa fa-home"></i> Inicio
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="edc.html">
+                <i class="fa fa-piggy-bank"></i> Estado de Cuenta
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="history.html">
+                <i class="fa fa-history"></i> Historial
+              </a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="search.html">
+                <i class="fa fa-search"></i> Búsqueda
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="help.html">
+                <i class="fa fa-question-circle"></i> Preguntas Frecuentes
+              </a>
+            </li>
+            <li class="nav-item">
+              <div class="dropdown btn-profile">
+                <button class="btn dropdown-toggle nav-link" type="button" id="logo-navbar" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="fa fa-user-circle"></i> Mi Cuenta
+                </button>
+                <ul class="dropdown-menu my-dropdown">
+                  <li class="nav-item">
+                    <a class="nav-link drp-link" href="profile.html">
+                      <i class="fa fa-user"></i> Mi Perfil
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link drp-link" href="info_fiscal.html">
+                      <i class="fa fa-gavel"></i> Inf. Fiscal
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link drp-link" href="config.html">
+                      <i class="fa fa-cog"></i> Configuración
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link drp-link" href="index.html">
+                      <i class="fa fa-sign-out-alt"></i> Cerrar Sesión
+                    </a>
+                  </li>                
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav> <!-- FIN BARRA DE NAVEGACIÓN -->
+
+    <!-- Page Content -->
+    <div class="container">
+
+
+
+      <!-- ENCABEZADO DE SECCIÓN -->
+      <div class="row">
+        
+        <div class="col-lg-12 text-center main-text">
+          <br><br>  
+          <h1 class="mt-5 font1 red-color">Cuentas Claras</h1>
+          <hr>
+          <h2 class="mt-5 font1 red-color subtitle">Búsqueda</h2>
+        </div>
+
+        <div class="col-lg-1"></div>
+        <div class="col-lg-10 supplementary-text text-center">
+          <hr>
+        </div>
+
+      </div> <!-- FIN encabezado de sección -->
+
+
+
+      <!-- CUADRO DE BÚSQUEDA -->
+      <div class="row">
+
+        <div class="col-lg-3"></div>
+        <div class="col-lg-6 supplementary-text">
+          <!-- Search form -->
+          <div class="form-inline btn-card justify-content-center">
+              <div class="active-red-3 active-red-4 mb-4 mx-sm-3">
+                <input type="text" class="form-control" id="search" placeholder="Buscar..." style="width: 300px" autofocus>
+              </div>
+              <button class="btn mb-4" onclick="buscar()">
+                <img src="styles/images/logo_search.png" class="logo-search">
+              </button>
+          </div>
+        </div>
+        <div class="col-lg-3"></div>
+      
+      </div> <!-- FIN cuadro de búsqueda -->
+
+
+
+      <!-- SECCIÓN DE RESULTADOS -->
+      <div class="row" id="resBusq">
+
+        <!-- Encabezado de búsqueda -->
+        <div class="col-lg-12 supplementary-text">
+          <div class="text-center">
+            <br>
+            <p id="strSearch1" style="line-height: 0.5;"></p>
+            <h4 id="strSearch2" style="line-height: 0.8;"></h4>
+            <hr style="line-height: 0.5;">
+
+
+            <div id="strSimilares">
+              <!-- mensaje en caso de no coincidencia en búsqueda -->
+              <p class="text-center">No se encontraron coincidencias, se muestran resultados similares.</p>
+            </div>
+
+            <div id="strNoCoincide">
+              <!-- mensaje en caso de no coincidencia en búsqueda -->
+              <p class="text-center">No se encontraron coincidencias</p>
+            </div>
+
+          </div>
+        </div> <!-- fin encabezado de búsqueda-->
+
+
+        <!-- Tabla de Resultados COMUNES -->
+        <div class="col-lg-12" id="tabResults">
+          <table class="table history-table">
+            <thead class="history-thead">
+              <tr>
+                <th></th>
+                <th style="text-align: right;">Término</th>
+                <th></th>
+                <th style="text-align: left;">Significado</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td></td>
+                <th style="text-align: right;" id="cellTermino"></th>
+                <!--<td><img src="styles/images/flecha.png" class="logo-dwnld"></td>-->
+                <td class="red-color" id="flecha">
+                  <strong> ----> </strong>
+                </td>
+                <td style="text-align: left;" id="cellSignificado"></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div> <!-- fin tabla de Resultados COMUNES -->
+
+        <!-- Tabla de Resultados A -->
+        <div class="col-lg-12" id="tabResultsA" style="display: none;">
+          <table class="table history-table">
+            <thead class="history-thead">
+              <tr>
+                <th></th>
+                <th style="text-align: right;">Término</th>
+                <th></th>
+                <th style="text-align: left;">Significado</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td></td>
+                <th style="text-align: right;" id="cellTermino">ABO</th>
+                <td class="red-color" id="flecha">
+                  <strong> ----> </strong>
+                </td>
+                <td style="text-align: left;" id="cellSignificado">Abono</td>
+              </tr>
+              <tr>
+                <td></td>
+                <th style="text-align: right;" id="cellTermino">ANT</th>
+                <td class="red-color" id="flecha">
+                  <strong> ----> </strong>
+                </td>
+                <td style="text-align: left;" id="cellSignificado">Anticipo</td>
+              </tr>
+              <tr>
+                <td></td>
+                <th style="text-align: right;" id="cellTermino">ANTICIP</th>
+                <td class="red-color" id="flecha">
+                  <strong> ----> </strong>
+                </td>
+                <td style="text-align: left;" id="cellSignificado">Anticipado</td>
+              </tr>
+              <tr>
+                <td></td>
+                <th style="text-align: right;" id="cellTermino">ANUL</th>
+                <td class="red-color" id="flecha">
+                  <strong> ----> </strong>
+                </td>
+                <td style="text-align: left;" id="cellSignificado">Anulación</td>
+              </tr>
+              <tr>
+                <td></td>
+                <th style="text-align: right;" id="cellTermino">ASEG</th>
+                <td class="red-color" id="flecha">
+                  <strong> ----> </strong>
+                </td>
+                <td style="text-align: left;" id="cellSignificado">Aseguramiento</td>
+              </tr>
+              <tr>
+                <td></td>
+                <th style="text-align: right;" id="cellTermino">AUT</th>
+                <td class="red-color" id="flecha">
+                  <strong> ----> </strong>
+                </td>
+                <td style="text-align: left;" id="cellSignificado">Automático</td>
+              </tr>
+              <tr>
+                <td></td>
+                <th style="text-align: right;" id="cellTermino">AUTO</th>
+                <td class="red-color" id="flecha">
+                  <strong> ----> </strong>
+                </td>
+                <td style="text-align: left;" id="cellSignificado">Automotriz</td>
+              </tr>
+            </tbody>
+          </table>
+        </div> <!-- fin tabla de Resultados A -->
+
+        <!-- Tabla de Resultados B -->
+        <div class="col-lg-12" id="tabResultsB" style="display: none;">
+          <table class="table history-table">
+            <thead class="history-thead">
+              <tr>
+                <th></th>
+                <th style="text-align: right;">Término</th>
+                <th></th>
+                <th style="text-align: left;">Significado</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td></td>
+                <th style="text-align: right;" id="cellTermino">BME</th>
+                <td class="red-color" id="flecha">
+                  <strong> ----> </strong>
+                </td>
+                <td style="text-align: left;" id="cellSignificado">Número de <br> Contrato de <br> Fondos de <br> Inversión</td>
+              </tr>
+              <tr>
+                <td></td>
+                <th style="text-align: right;" id="cellTermino">BONI</th>
+                <td class="red-color" id="flecha">
+                  <strong> ----> </strong>
+                </td>
+                <td style="text-align: left;" id="cellSignificado">Bonificación</td>
+              </tr>
+            </tbody>
+          </table>
+        </div> <!-- fin tabla de Resultados B -->
+
+        <!-- Tabla de Resultados C -->
+        <div class="col-lg-12" id="tabResultsC" style="display: none;">
+          <table class="table history-table">
+            <thead class="history-thead">
+              <tr>
+                <th></th>
+                <th style="text-align: right;">Término</th>
+                <th></th>
+                <th style="text-align: left;">Significado</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td></td>
+                <th style="text-align: right;" id="cellTermino">C.A.T.</th>
+                <td class="red-color" id="flecha">
+                  <strong> ----> </strong>
+                </td>
+                <td style="text-align: left;" id="cellSignificado">Costo Anual <br> Total</td>
+              </tr>
+              <tr>
+                <td></td>
+                <th style="text-align: right;" id="cellTermino">C.E.R.</th>
+                <td class="red-color" id="flecha">
+                  <strong> ----> </strong>
+                </td>
+                <td style="text-align: left;" id="cellSignificado">Costo Efectivo <br> Remanente</td>
+              </tr>
+              <tr>
+                <td></td>
+                <th style="text-align: right;" id="cellTermino">C/U</th>
+                <td class="red-color" id="flecha">
+                  <strong> ----> </strong>
+                </td>
+                <td style="text-align: left;" id="cellSignificado">Cada Uno(a)</td>
+              </tr>
+              <tr>
+                <td></td>
+                <th style="text-align: right;" id="cellTermino">C</th>
+                <td class="red-color" id="flecha">
+                  <strong> ----> </strong>
+                </td>
+                <td style="text-align: left;" id="cellSignificado">Con</td>
+              </tr>
+              <tr>
+                <td></td>
+                <th style="text-align: right;" id="cellTermino">CAJ</th>
+                <td class="red-color" id="flecha">
+                  <strong> ----> </strong>
+                </td>
+                <td style="text-align: left;" id="cellSignificado">Cajero(s)</td>
+              </tr>
+              <tr>
+                <td></td>
+                <th style="text-align: right;" id="cellTermino">CANC</th>
+                <td class="red-color" id="flecha">
+                  <strong> ----> </strong>
+                </td>
+                <td style="text-align: left;" id="cellSignificado">Cancelación</td>
+              </tr>
+              <tr>
+                <td></td>
+                <th style="text-align: right;" id="cellTermino">CAP</th>
+                <td class="red-color" id="flecha">
+                  <strong> ----> </strong>
+                </td>
+                <td style="text-align: left;" id="cellSignificado">Capital</td>
+              </tr>
+              <tr>
+                <td></td>
+                <th style="text-align: right;" id="cellTermino">CDMX</th>
+                <td class="red-color" id="flecha">
+                  <strong> ----> </strong>
+                </td>
+                <td style="text-align: left;" id="cellSignificado">Ciudad de México</td>
+              </tr>
+              <tr>
+                <td></td>
+                <th style="text-align: right;" id="cellTermino">CERTIF</th>
+                <td class="red-color" id="flecha">
+                  <strong> ----> </strong>
+                </td>
+                <td style="text-align: left;" id="cellSignificado">Certificado</td>
+              </tr>
+              <tr>
+                <td></td>
+                <th style="text-align: right;" id="cellTermino">CGO</th>
+                <td class="red-color" id="flecha">
+                  <strong> ----> </strong>
+                </td>
+                <td style="text-align: left;" id="cellSignificado">Cargo</td>
+              </tr>
+              <tr>
+                <td></td>
+                <th style="text-align: right;" id="cellTermino">CH</th>
+                <td class="red-color" id="flecha">
+                  <strong> ----> </strong>
+                </td>
+                <td style="text-align: left;" id="cellSignificado">Cheques</td>
+              </tr>
+              <tr>
+                <td></td>
+                <th style="text-align: right;" id="cellTermino">COB</th>
+                <td class="red-color" id="flecha">
+                  <strong> ----> </strong>
+                </td>
+                <td style="text-align: left;" id="cellSignificado">Cobro</td>
+              </tr>
+              <tr>
+                <td></td>
+                <th style="text-align: right;" id="cellTermino">COM</th>
+                <td class="red-color" id="flecha">
+                  <strong> ----> </strong>
+                </td>
+                <td style="text-align: left;" id="cellSignificado">Comisión</td>
+              </tr>
+              <tr>
+                <td></td>
+                <th style="text-align: right;" id="cellTermino">CR / CRED</th>
+                <td class="red-color" id="flecha">
+                  <strong> ----> </strong>
+                </td>
+                <td style="text-align: left;" id="cellSignificado">Crédito</td>
+              </tr>
+              <tr>
+                <td></td>
+                <th style="text-align: right;" id="cellTermino">CTA</th>
+                <td class="red-color" id="flecha">
+                  <strong> ----> </strong>
+                </td>
+                <td style="text-align: left;" id="cellSignificado">Cuenta</td>
+              </tr>
+            </tbody>
+          </table>
+        </div> <!-- fin tabla de Resultados C -->
+        
+        <!-- Tabla de Resultados D -->
+        <div class="col-lg-12" id="tabResultsD" style="display: none;">
+          <table class="table history-table">
+            <thead class="history-thead">
+              <tr>
+                <th></th>
+                <th style="text-align: right;">Término</th>
+                <th></th>
+                <th style="text-align: left;">Significado</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td></td>
+                <th style="text-align: right;" id="cellTermino">DEB</th>
+                <td class="red-color" id="flecha">
+                  <strong> ----> </strong>
+                </td>
+                <td style="text-align: left;" id="cellSignificado">Débito</td>
+              </tr>
+              <tr>
+                <td></td>
+                <th style="text-align: right;" id="cellTermino">DEP</th>
+                <td class="red-color" id="flecha">
+                  <strong> ----> </strong>
+                </td>
+                <td style="text-align: left;" id="cellSignificado">Depósito</td>
+              </tr>
+              <tr>
+                <td></td>
+                <th style="text-align: right;" id="cellTermino">DEV</th>
+                <td class="red-color" id="flecha">
+                  <strong> ----> </strong>
+                </td>
+                <td style="text-align: left;" id="cellSignificado">Devolución(es)</td>
+              </tr>
+              <tr>
+                <td></td>
+                <th style="text-align: right;" id="cellTermino">DISP</th>
+                <td class="red-color" id="flecha">
+                  <strong> ----> </strong>
+                </td>
+                <td style="text-align: left;" id="cellSignificado">Dispocisión</td>
+              </tr>
+              <tr>
+                <td></td>
+                <th style="text-align: right;" id="cellTermino">DOMIC</th>
+                <td class="red-color" id="flecha">
+                  <strong> ----> </strong>
+                </td>
+                <td style="text-align: left;" id="cellSignificado">Domiciliación</td>
+              </tr>
+            </tbody>
+          </table>
+        </div> <!-- fin tabla de Resultados D -->
+
+        <!-- Tabla de Resultados E -->
+        <div class="col-lg-12" id="tabResultsE" style="display: none;">
+          <table class="table history-table">
+            <thead class="history-thead">
+              <tr>
+                <th></th>
+                <th style="text-align: right;">Término</th>
+                <th></th>
+                <th style="text-align: left;">Significado</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td></td>
+                <th style="text-align: right;" id="cellTermino">EFEC</th>
+                <td class="red-color" id="flecha">
+                  <strong> ----> </strong>
+                </td>
+                <td style="text-align: left;" id="cellSignificado">Efectivo</td>
+              </tr>
+              <tr>
+                <td></td>
+                <th style="text-align: right;" id="cellTermino">ELEC</th>
+                <td class="red-color" id="flecha">
+                  <strong> ----> </strong>
+                </td>
+                <td style="text-align: left;" id="cellSignificado">Electrónico(a)</td>
+              </tr>
+              <tr>
+                <td></td>
+                <th style="text-align: right;" id="cellTermino">EQUIV</th>
+                <td class="red-color" id="flecha">
+                  <strong> ----> </strong>
+                </td>
+                <td style="text-align: left;" id="cellSignificado">Equivalente</td>
+              </tr>
+              <tr>
+                <td></td>
+                <th style="text-align: right;" id="cellTermino">ESQ</th>
+                <td class="red-color" id="flecha">
+                  <strong> ----> </strong>
+                </td>
+                <td style="text-align: left;" id="cellSignificado">Esquema</td>
+              </tr>
+            </tbody>
+          </table>
+        </div> <!-- fin tabla de Resultados E -->
+
+        <!-- Tabla de Resultados F -->
+        <div class="col-lg-12" id="tabResultsF" style="display: none;">
+          <table class="table history-table">
+            <thead class="history-thead">
+              <tr>
+                <th></th>
+                <th style="text-align: right;">Término</th>
+                <th></th>
+                <th style="text-align: left;">Significado</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td></td>
+                <th style="text-align: right;" id="cellTermino">FACT</th>
+                <td class="red-color" id="flecha">
+                  <strong> ----> </strong>
+                </td>
+                <td style="text-align: left;" id="cellSignificado">Facturación</td>
+              </tr>
+              <tr>
+                <td></td>
+                <th style="text-align: right;" id="cellTermino">FEC</th>
+                <td class="red-color" id="flecha">
+                  <strong> ----> </strong>
+                </td>
+                <td style="text-align: left;" id="cellSignificado">Fecha</td>
+              </tr>
+              <tr>
+                <td></td>
+                <th style="text-align: right;" id="cellTermino">FED</th>
+                <td class="red-color" id="flecha">
+                  <strong> ----> </strong>
+                </td>
+                <td style="text-align: left;" id="cellSignificado">Federal(es)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div> <!-- fin tabla de Resultados F -->
+
+        <!-- Tabla de Resultados G -->
+        <div class="col-lg-12" id="tabResultsG" style="display: none;">
+          <table class="table history-table">
+            <thead class="history-thead">
+              <tr>
+                <th></th>
+                <th style="text-align: right;">Término</th>
+                <th></th>
+                <th style="text-align: left;">Significado</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td></td>
+                <th style="text-align: right;" id="cellTermino">G.A.T.</th>
+                <td class="red-color" id="flecha">
+                  <strong> ----> </strong>
+                </td>
+                <td style="text-align: left;" id="cellSignificado">Ganancia Anual <br> Total</td>
+              </tr>
+            </tbody>
+          </table>
+        </div> <!-- fin tabla de Resultados G -->
+
+        <!-- Tabla de Resultados I -->
+        <div class="col-lg-12" id="tabResultsI" style="display: none;">
+          <table class="table history-table">
+            <thead class="history-thead">
+              <tr>
+                <th></th>
+                <th style="text-align: right;">Término</th>
+                <th></th>
+                <th style="text-align: left;">Significado</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td></td>
+                <th style="text-align: right;" id="cellTermino">IMPTO</th>
+                <td class="red-color" id="flecha">
+                  <strong> ----> </strong>
+                </td>
+                <td style="text-align: left;" id="cellSignificado">Impuesto(s)</td>
+              </tr>
+              <tr>
+                <td></td>
+                <th style="text-align: right;" id="cellTermino">INI</th>
+                <td class="red-color" id="flecha">
+                  <strong> ----> </strong>
+                </td>
+                <td style="text-align: left;" id="cellSignificado">Inicial</td>
+              </tr>
+              <tr>
+                <td></td>
+                <th style="text-align: right;" id="cellTermino">INT / INTS</th>
+                <td class="red-color" id="flecha">
+                  <strong> ----> </strong>
+                </td>
+                <td style="text-align: left;" id="cellSignificado">Interés(es)</td>
+              </tr>
+              <tr>
+                <td></td>
+                <th style="text-align: right;" id="cellTermino">INTAL</th>
+                <td class="red-color" id="flecha">
+                  <strong> ----> </strong>
+                </td>
+                <td style="text-align: left;" id="cellSignificado">Internacional</td>
+              </tr>
+              <tr>
+                <td></td>
+                <th style="text-align: right;" id="cellTermino">INV</th>
+                <td class="red-color" id="flecha">
+                  <strong> ----> </strong>
+                </td>
+                <td style="text-align: left;" id="cellSignificado">Inversión</td>
+              </tr>
+            </tbody>
+          </table>
+        </div> <!-- fin tabla de Resultados I -->
+
+        <!-- Tabla de Resultados L -->
+        <div class="col-lg-12" id="tabResultsL" style="display: none;">
+          <table class="table history-table">
+            <thead class="history-thead">
+              <tr>
+                <th></th>
+                <th style="text-align: right;">Término</th>
+                <th></th>
+                <th style="text-align: left;">Significado</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td></td>
+                <th style="text-align: right;" id="cellTermino">LCI</th>
+                <td class="red-color" id="flecha">
+                  <strong> ----> </strong>
+                </td>
+                <td style="text-align: left;" id="cellSignificado">Línea de Crédito <br> Inmediata </td>
+              </tr>
+              <tr>
+                <td></td>
+                <th style="text-align: right;" id="cellTermino">LIQ</th>
+                <td class="red-color" id="flecha">
+                  <strong> ----> </strong>
+                </td>
+                <td style="text-align: left;" id="cellSignificado">Liquidación</td>
+              </tr>
+              <tr>
+                <td></td>
+                <th style="text-align: right;" id="cellTermino">LOC</th>
+                <td class="red-color" id="flecha">
+                  <strong> ----> </strong>
+                </td>
+                <td style="text-align: left;" id="cellSignificado">Línea de <br> Cobertura </td>
+              </tr>
+              <tr>
+                <td></td>
+                <th style="text-align: right;" id="cellTermino">LPI</th>
+                <td class="red-color" id="flecha">
+                  <strong> ----> </strong>
+                </td>
+                <td style="text-align: left;" id="cellSignificado">Linea de Protección <br> Inmediata</td>
+              </tr>
+            </tbody>
+          </table>
+        </div> <!-- fin tabla de Resultados L -->
+
+        <!-- Tabla de Resultados M -->
+        <div class="col-lg-12" id="tabResultsM" style="display: none;">
+          <table class="table history-table">
+            <thead class="history-thead">
+              <tr>
+                <th></th>
+                <th style="text-align: right;">Término</th>
+                <th></th>
+                <th style="text-align: left;">Significado</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td></td>
+                <th style="text-align: right;" id="cellTermino">MORA</th>
+                <td class="red-color" id="flecha">
+                  <strong> ----> </strong>
+                </td>
+                <td style="text-align: left;" id="cellSignificado">Moratorio(s)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div> <!-- fin tabla de Resultados M -->
+
+        <!-- Tabla de Resultados N -->
+        <div class="col-lg-12" id="tabResultsN" style="display: none;">
+          <table class="table history-table">
+            <thead class="history-thead">
+              <tr>
+                <th></th>
+                <th style="text-align: right;">Término</th>
+                <th></th>
+                <th style="text-align: left;">Significado</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td></td>
+                <th style="text-align: right;" id="cellTermino">N. OP</th>
+                <td class="red-color" id="flecha">
+                  <strong> ----> </strong>
+                </td>
+                <td style="text-align: left;" id="cellSignificado">Número de <br> Operaciones</td>
+              </tr>
+              <tr>
+                <td></td>
+                <th style="text-align: right;" id="cellTermino">NO</th>
+                <td class="red-color" id="flecha">
+                  <strong> ----> </strong>
+                </td>
+                <td style="text-align: left;" id="cellSignificado">Número</td>
+              </tr>
+              <tr>
+                <td></td>
+                <th style="text-align: right;" id="cellTermino">NOM</th>
+                <td class="red-color" id="flecha">
+                  <strong> ----> </strong>
+                </td>
+                <td style="text-align: left;" id="cellSignificado">Nómina</td>
+              </tr>
+            </tbody>
+          </table>
+        </div> <!-- fin tabla de Resultados N -->
+
+        <!-- Tabla de Resultados O -->
+        <div class="col-lg-12" id="tabResultsO" style="display: none;">
+          <table class="table history-table">
+            <thead class="history-thead">
+              <tr>
+                <th></th>
+                <th style="text-align: right;">Término</th>
+                <th></th>
+                <th style="text-align: left;">Significado</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td></td>
+                <th style="text-align: right;" id="cellTermino">ORD</th>
+                <td class="red-color" id="flecha">
+                  <strong> ----> </strong>
+                </td>
+                <td style="text-align: left;" id="cellSignificado">Orden</td>
+              </tr>
+            </tbody>
+          </table>
+        </div> <!-- fin tabla de Resultados O -->
+
+        <!-- Tabla de Resultados P -->
+        <div class="col-lg-12" id="tabResultsP" style="display: none;">
+          <table class="table history-table">
+            <thead class="history-thead">
+              <tr>
+                <th></th>
+                <th style="text-align: right;">Término</th>
+                <th></th>
+                <th style="text-align: left;">Significado</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td></td>
+                <th style="text-align: right;" id="cellTermino">P</th>
+                <td class="red-color" id="flecha">
+                  <strong> ----> </strong>
+                </td>
+                <td style="text-align: left;" id="cellSignificado">Por</td>
+              </tr>
+              <tr>
+                <td></td>
+                <th style="text-align: right;" id="cellTermino">PAG</th>
+                <td class="red-color" id="flecha">
+                  <strong> ----> </strong>
+                </td>
+                <td style="text-align: left;" id="cellSignificado">Pagaré(s)</td>
+              </tr>
+              <tr>
+                <td></td>
+                <th style="text-align: right;" id="cellTermino">PER</th>
+                <td class="red-color" id="flecha">
+                  <strong> ----> </strong>
+                </td>
+                <td style="text-align: left;" id="cellSignificado">Periodo</td>
+              </tr>
+              <tr>
+                <td></td>
+                <th style="text-align: right;" id="cellTermino">PGO</th>
+                <td class="red-color" id="flecha">
+                  <strong> ----> </strong>
+                </td>
+                <td style="text-align: left;" id="cellSignificado">Pago</td>
+              </tr>
+              <tr>
+                <td></td>
+                <th style="text-align: right;" id="cellTermino">PZO</th>
+                <td class="red-color" id="flecha">
+                  <strong> ----> </strong>
+                </td>
+                <td style="text-align: left;" id="cellSignificado">Plazo</td>
+              </tr>
+            </tbody>
+          </table>
+        </div> <!-- fin tabla de Resultados P -->
+
+        <!-- Tabla de Resultados R -->
+        <div class="col-lg-12" id="tabResultsR" style="display: none;">
+          <table class="table history-table">
+            <thead class="history-thead">
+              <tr>
+                <th></th>
+                <th style="text-align: right;">Término</th>
+                <th></th>
+                <th style="text-align: left;">Significado</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td></td>
+                <th style="text-align: right;" id="cellTermino">REC</th>
+                <td class="red-color" id="flecha">
+                  <strong> ----> </strong>
+                </td>
+                <td style="text-align: left;" id="cellSignificado">Recibo</td>
+              </tr>
+              <tr>
+                <td></td>
+                <th style="text-align: right;" id="cellTermino">REF</th>
+                <td class="red-color" id="flecha">
+                  <strong> ----> </strong>
+                </td>
+                <td style="text-align: left;" id="cellSignificado">Referencia</td>
+              </tr>
+              <tr>
+                <td></td>
+                <th style="text-align: right;" id="cellTermino">REN</th>
+                <td class="red-color" id="flecha">
+                  <strong> ----> </strong>
+                </td>
+                <td style="text-align: left;" id="cellSignificado">Rendimiento</td>
+              </tr>
+            </tbody>
+          </table>
+        </div> <!-- fin tabla de Resultados R -->
+
+        <!-- Tabla de Resultados S -->
+        <div class="col-lg-12" id="tabResultsS" style="display: none;">
+          <table class="table history-table">
+            <thead class="history-thead">
+              <tr>
+                <th></th>
+                <th style="text-align: right;">Término</th>
+                <th></th>
+                <th style="text-align: left;">Significado</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td></td>
+                <th style="text-align: right;" id="cellTermino">S</th>
+                <td class="red-color" id="flecha">
+                  <strong> ----> </strong>
+                </td>
+                <td style="text-align: left;" id="cellSignificado">Sobre</td>
+              </tr>
+              <tr>
+                <td></td>
+                <th style="text-align: right;" id="cellTermino">SBC</th>
+                <td class="red-color" id="flecha">
+                  <strong> ----> </strong>
+                </td>
+                <td style="text-align: left;" id="cellSignificado">Salvo Buen Cobro</td>
+              </tr>
+              <tr>
+                <td></td>
+                <th style="text-align: right;" id="cellTermino">SDO</th>
+                <td class="red-color" id="flecha">
+                  <strong> ----> </strong>
+                </td>
+                <td style="text-align: left;" id="cellSignificado">Saldo</td>
+              </tr>
+              <tr>
+                <td></td>
+                <th style="text-align: right;" id="cellTermino">SEG</th>
+                <td class="red-color" id="flecha">
+                  <strong> ----> </strong>
+                </td>
+                <td style="text-align: left;" id="cellSignificado">Seguro</td>
+              </tr>
+              <tr>
+                <td></td>
+                <th style="text-align: right;" id="cellTermino">SER</th>
+                <td class="red-color" id="flecha">
+                  <strong> ----> </strong>
+                </td>
+                <td style="text-align: left;" id="cellSignificado">Servicio</td>
+              </tr>
+              <tr>
+                <td></td>
+                <th style="text-align: right;" id="cellTermino">SPEI</th>
+                <td class="red-color" id="flecha">
+                  <strong> ----> </strong>
+                </td>
+                <td style="text-align: left;" id="cellSignificado">Sistema de <br> Pagos Electrónicos</td>
+              </tr>
+              <tr>
+                <td></td>
+                <th style="text-align: right;" id="cellTermino">SUC</th>
+                <td class="red-color" id="flecha">
+                  <strong> ----> </strong>
+                </td>
+                <td style="text-align: left;" id="cellSignificado">Sucursal</td>
+              </tr>
+            </tbody>
+          </table>
+        </div> <!-- fin tabla de Resultados S -->
+
+        <!-- Tabla de Resultados T -->
+        <div class="col-lg-12" id="tabResultsT" style="display: none;">
+          <table class="table history-table">
+            <thead class="history-thead">
+              <tr>
+                <th></th>
+                <th style="text-align: right;">Término</th>
+                <th></th>
+                <th style="text-align: left;">Significado</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td></td>
+                <th style="text-align: right;" id="cellTermino">T</th>
+                <td class="red-color" id="flecha">
+                  <strong> ----> </strong>
+                </td>
+                <td style="text-align: left;" id="cellSignificado">Tasa</td>
+              </tr>
+              <tr>
+                <td></td>
+                <th style="text-align: right;" id="cellTermino">TARJ</th>
+                <td class="red-color" id="flecha">
+                  <strong> ----> </strong>
+                </td>
+                <td style="text-align: left;" id="cellSignificado">Tarjeta(s)</td>
+              </tr>
+              <tr>
+                <td></td>
+                <th style="text-align: right;" id="cellTermino">TEF</th>
+                <td class="red-color" id="flecha">
+                  <strong> ----> </strong>
+                </td>
+                <td style="text-align: left;" id="cellSignificado">Transferencia <br> Electrónica <br> de Fondos</td>
+              </tr>
+              <tr>
+                <td></td>
+                <th style="text-align: right;" id="cellTermino">TVP</th>
+                <td class="red-color" id="flecha">
+                  <strong> ----> </strong>
+                </td>
+                <td style="text-align: left;" id="cellSignificado">Terminal Punto <br> de Venta</td>
+              </tr>
+              <tr>
+                <td></td>
+                <th style="text-align: right;" id="cellTermino">TRANSF</th>
+                <td class="red-color" id="flecha">
+                  <strong> ----> </strong>
+                </td>
+                <td style="text-align: left;" id="cellSignificado">Transferencia</td>
+              </tr>
+            </tbody>
+          </table>
+        </div> <!-- fin tabla de Resultados T -->
+
+        <!-- Tabla de Resultados V -->
+        <div class="col-lg-12" id="tabResultsV" style="display: none;">
+          <table class="table history-table">
+            <thead class="history-thead">
+              <tr>
+                <th></th>
+                <th style="text-align: right;">Término</th>
+                <th></th>
+                <th style="text-align: left;">Significado</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td></td>
+                <th style="text-align: right;" id="cellTermino">VTA</th>
+                <td class="red-color" id="flecha">
+                  <strong> ----> </strong>
+                </td>
+                <td style="text-align: left;" id="cellSignificado">Venta(s)</td>
+              </tr>
+              <tr>
+                <td></td>
+                <th style="text-align: right;" id="cellTermino">VTO</th>
+                <td class="red-color" id="flecha">
+                  <strong> ----> </strong>
+                </td>
+                <td style="text-align: left;" id="cellSignificado">Vencimiento</td>
+              </tr>
+            </tbody>
+          </table>
+        </div> <!-- fin tabla de Resultados V -->
+
+      </div> <!-- FIN sección de resultados -->
+
+
+    </div> <!-- FIN CONTAINER -->
+
+    <br><br><br><br>
+
+
+    <!--FOOTER-->
+    <div class="footer">
+      <br><br>
+
+      <img src="styles/images/logo.png" id="logo-fopter" class="logo-footer">
+
+      <p>
+        <br>Banco Banco (México) S.A., Institución de Banca Múltiple, 
+        <br> 
+        Grupo Financiero Banco México, R.F.C. BSM970519DU8.
+      </p>
+      <p>
+        Prolongación Paseo de la Reforma no. 500 piso 2 mod. 206, 
+        <br>
+        Col. Lomas de Santa Fe, Delegación Álvaro Obregón, C.P. 01219, Ciudad de México.
+      </p>
+
+      <br>
+
+      <p>
+        Agradeceremos nos comunique sus objeciones en un plazo de 90 días, 
+        <br>
+        de lo contrario consideraremos su conformidad.
+      </p>
+
+      <br><br><br>
+    </div>
+
+
+    <!--================================================================================================-->
+    <!--================================================================================================-->
+
+
+    <!-- BOOTSTRAP JS -->
+    <script src="styles/jquery/jquery.min.js"></script>
+    <script src="styles/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+
+
+    <!-- JAVASCRIPT -->
+    <script>
+      document.getElementById("resBusq").style.display = "none";
+      document.getElementById("strSimilares").style.display = "none";
+      document.getElementById("strNoCoincide").style.display = "none";
+
+
+      // Elimina los diacríticos de un texto (ES6)
+      function quitarAcentos(texto) {
+          return texto.normalize('NFD').replace(/[\u0300-\u036f]/g,"");
+      }
+
+
+
+      function buscar() {
+        var strSearch = document.getElementById("search").value;
+        strSearch = strSearch.toLowerCase();
+        strSearch = quitarAcentos(strSearch);
+
+        //alert("Vas a buscar: " + strSearch + ".");
+        
+        document.getElementById("resBusq").style.display = "block";
+        document.getElementById("tabResults").style.display = "block";
+        document.getElementById("strSearch1").innerHTML = "Resultados para: ";
+        document.getElementById("strSearch2").innerHTML = strSearch.toUpperCase();
+
+        // Casos comunes de búsqueda en la terminología del EDC
+        switch(strSearch) {
+          case "abo":
+          case "abono":
+            hideStuff();
+            document.getElementById("strSimilares").style.display = "none";
+            document.getElementById("strNoCoincide").style.display = "none";
+            document.getElementById("cellTermino").innerHTML = "ABO";
+            document.getElementById("flecha").innerHTML = "---->";
+            document.getElementById("cellSignificado").innerHTML = "Abono";
+            break;
+          case "anul":
+          case "anulacion":
+            hideStuff();
+            document.getElementById("strSimilares").style.display = "none";
+            document.getElementById("strNoCoincide").style.display = "none";
+            document.getElementById("cellTermino").innerHTML = "ANUL";
+            document.getElementById("flecha").innerHTML = "---->";
+            document.getElementById("cellSignificado").innerHTML = "Anulación";
+            break;
+          case "ant":
+          case "anticipo":
+            hideStuff();
+            document.getElementById("strSimilares").style.display = "none";
+            document.getElementById("strNoCoincide").style.display = "none";
+            document.getElementById("cellTermino").innerHTML = "ANT";
+            document.getElementById("flecha").innerHTML = "---->";
+            document.getElementById("cellSignificado").innerHTML = "Anticipo";
+            break;
+          case "anticip":
+          case "anticipado":
+            hideStuff();
+            document.getElementById("strSimilares").style.display = "none";
+            document.getElementById("strNoCoincide").style.display = "none";
+            document.getElementById("cellTermino").innerHTML = "ANTICIP";
+            document.getElementById("flecha").innerHTML = "---->";
+            document.getElementById("cellSignificado").innerHTML = "Anticipado";
+            break;
+          case "aseg":
+          case "aseguramiento":
+            hideStuff();
+            document.getElementById("strSimilares").style.display = "none";
+            document.getElementById("strNoCoincide").style.display = "none";
+            document.getElementById("cellTermino").innerHTML = "ASEG";
+            document.getElementById("cellSignificado").innerHTML = "Aseguramiento";
+            break;
+          case "aut":
+          case "automatico":
+            hideStuff();
+            document.getElementById("strSimilares").style.display = "none";
+            document.getElementById("strNoCoincide").style.display = "none";
+            document.getElementById("cellTermino").innerHTML = "AUT";
+            document.getElementById("cellSignificado").innerHTML = "Automático";
+            break;
+          case "auto":
+          case "automovil":
+          case "automotriz":
+            hideStuff();
+            document.getElementById("strSimilares").style.display = "none";
+            document.getElementById("strNoCoincide").style.display = "none";
+            document.getElementById("cellTermino").innerHTML = "AUTO";
+            document.getElementById("flecha").innerHTML = "---->";
+            document.getElementById("cellSignificado").innerHTML = "Automóvil <br> Automotriz";
+            break;
+          case "bme":
+          case "numero de contrato de fondos de inversion":
+            hideStuff();
+            document.getElementById("strSimilares").style.display = "none";
+            document.getElementById("strNoCoincide").style.display = "none";
+            document.getElementById("cellTermino").innerHTML = "BME";
+            document.getElementById("flecha").innerHTML = "---->";
+            document.getElementById("cellSignificado").innerHTML = "Número de Contrato <br> de Fondos de Inversión";
+            break;
+          case "boni":
+          case "bonificacion":
+            hideStuff();
+            document.getElementById("strSimilares").style.display = "none";
+            document.getElementById("strNoCoincide").style.display = "none";
+            document.getElementById("cellTermino").innerHTML = "BONI";
+            document.getElementById("cellSignificado").innerHTML = "Bonificación";
+            break;
+          case "c":
+          case "con":
+            hideStuff();
+            document.getElementById("strSimilares").style.display = "none";
+            document.getElementById("strNoCoincide").style.display = "none";
+            document.getElementById("cellTermino").innerHTML = "C";
+            document.getElementById("cellSignificado").innerHTML = "Con";
+            break;
+          case "c/u":
+          case "cada uno":
+            hideStuff();
+            document.getElementById("strSimilares").style.display = "none";
+            document.getElementById("strNoCoincide").style.display = "none";
+            document.getElementById("cellTermino").innerHTML = "C/U";
+            document.getElementById("cellSignificado").innerHTML = "Cada uno(a) ";
+            break;
+          case "cat":
+          case "costo anual total":
+            hideStuff();
+            document.getElementById("strSimilares").style.display = "none";
+            document.getElementById("strNoCoincide").style.display = "none";
+            document.getElementById("cellTermino").innerHTML = "C.A.T.";
+            document.getElementById("cellSignificado").innerHTML = "Costo Anual total";
+            break;
+          case "cer":
+          case "costo efectivo remanente":
+            hideStuff();
+            document.getElementById("strSimilares").style.display = "none";
+            document.getElementById("strNoCoincide").style.display = "none";
+            document.getElementById("cellTermino").innerHTML = "C.E.R.";
+            document.getElementById("cellSignificado").innerHTML = "Costo Efectivo <br> Remanente";
+            break;
+          case "caj":
+          case "cajero":
+          case "cajeros":
+            hideStuff();
+            document.getElementById("strSimilares").style.display = "none";
+            document.getElementById("strNoCoincide").style.display = "none";
+            document.getElementById("cellTermino").innerHTML = "CAJ";
+            document.getElementById("cellSignificado").innerHTML = "Cajero(s)";
+            break;
+          case "canc":
+          case "cancelacion":
+            hideStuff();
+            document.getElementById("strSimilares").style.display = "none";
+            document.getElementById("strNoCoincide").style.display = "none";
+            document.getElementById("cellTermino").innerHTML = "CANC";
+            document.getElementById("cellSignificado").innerHTML = "Cancelación";
+            break;
+          case "cap":
+          case "capital":
+            hideStuff();
+            document.getElementById("strSimilares").style.display = "none";
+            document.getElementById("strNoCoincide").style.display = "none";
+            document.getElementById("cellTermino").innerHTML = "CAP";
+            document.getElementById("cellSignificado").innerHTML = "Capital";
+            break;
+          case "cdmx":
+          case "ciudad de mexico":
+            hideStuff();
+            document.getElementById("strSimilares").style.display = "none";
+            document.getElementById("strNoCoincide").style.display = "none";
+            document.getElementById("cellTermino").innerHTML = "CDMX";
+            document.getElementById("cellSignificado").innerHTML = "Ciudad de México";
+            break;
+          case "certif":
+          case "certificado":
+            hideStuff();
+            document.getElementById("strSimilares").style.display = "none";
+            document.getElementById("strNoCoincide").style.display = "none";
+            document.getElementById("cellTermino").innerHTML = "CERTIF";
+            document.getElementById("cellSignificado").innerHTML = "Certificado";
+            break;
+          case "cgo":
+          case "cargo":
+            hideStuff();
+            document.getElementById("strSimilares").style.display = "none";
+            document.getElementById("strNoCoincide").style.display = "none";
+            document.getElementById("cellTermino").innerHTML = "CGO";
+            document.getElementById("cellSignificado").innerHTML = "Carbo";
+            break;
+          case "ch":
+          case "cheques":
+            hideStuff();
+            document.getElementById("strSimilares").style.display = "none";
+            document.getElementById("strNoCoincide").style.display = "none";
+            document.getElementById("cellTermino").innerHTML = "CH";
+            document.getElementById("cellSignificado").innerHTML = "Cheques";
+            break;
+          case "cob":
+          case "cobro":
+            hideStuff();
+            document.getElementById("strSimilares").style.display = "none";
+            document.getElementById("strNoCoincide").style.display = "none";
+            document.getElementById("cellTermino").innerHTML = "COB";
+            document.getElementById("cellSignificado").innerHTML = "Cobro";
+            break;
+          case "com":
+          case "comision":
+            hideStuff();
+            document.getElementById("strSimilares").style.display = "none";
+            document.getElementById("strNoCoincide").style.display = "none";
+            document.getElementById("cellTermino").innerHTML = "COM";
+            document.getElementById("cellSignificado").innerHTML = "Comisión";
+            break;
+          case "cr":
+          case "cred":
+          case "credito":
+            hideStuff();
+            document.getElementById("strSimilares").style.display = "none";
+            document.getElementById("strNoCoincide").style.display = "none";
+            document.getElementById("cellTermino").innerHTML = "CR / CRED";
+            document.getElementById("cellSignificado").innerHTML = "Crédito";
+            break;
+          case "cta":
+          case "cuenta":
+            hideStuff();
+            document.getElementById("strSimilares").style.display = "none";
+            document.getElementById("strNoCoincide").style.display = "none";
+            document.getElementById("cellTermino").innerHTML = "CTA";
+            document.getElementById("cellSignificado").innerHTML = "Cuenta";
+            break;
+          case "deb":
+          case "debito":
+            hideStuff();
+            document.getElementById("strSimilares").style.display = "none";
+            document.getElementById("strNoCoincide").style.display = "none";
+            document.getElementById("cellTermino").innerHTML = "DEB";
+            document.getElementById("cellSignificado").innerHTML = "Débito";
+            break;
+          case "dep":
+          case "deposito":
+            hideStuff();
+            document.getElementById("strSimilares").style.display = "none";
+            document.getElementById("strNoCoincide").style.display = "none";
+            document.getElementById("cellTermino").innerHTML = "DEP";
+            document.getElementById("cellSignificado").innerHTML = "Depósito";
+            break;
+          case "dev":
+          case "devoluciones":
+            hideStuff();
+            document.getElementById("strSimilares").style.display = "none";
+            document.getElementById("strNoCoincide").style.display = "none";
+            document.getElementById("cellTermino").innerHTML = "DEV";
+            document.getElementById("cellSignificado").innerHTML = "Devluciones";
+            break;
+          case "disp":
+          case "dispocision":
+            hideStuff();
+            document.getElementById("strSimilares").style.display = "none";
+            document.getElementById("strNoCoincide").style.display = "none";
+            document.getElementById("cellTermino").innerHTML = "DISP";
+            document.getElementById("cellSignificado").innerHTML = "Dispocisión";
+            break;
+          case "domic":
+          case "domiciliacion":
+            hideStuff();
+            document.getElementById("strSimilares").style.display = "none";
+            document.getElementById("strNoCoincide").style.display = "none";
+            document.getElementById("cellTermino").innerHTML = "DOMIC";
+            document.getElementById("cellSignificado").innerHTML = "Domiciliación";
+            break;
+          case "efec":
+          case "efectivo":
+            hideStuff();
+            document.getElementById("strSimilares").style.display = "none";
+            document.getElementById("strNoCoincide").style.display = "none";
+            document.getElementById("cellTermino").innerHTML = "EFEC";
+            document.getElementById("cellSignificado").innerHTML = "Efectivo";
+            break;
+          case "elec":
+          case "electronico":
+            hideStuff();
+            document.getElementById("strSimilares").style.display = "none";
+            document.getElementById("strNoCoincide").style.display = "none";
+            document.getElementById("cellTermino").innerHTML = "ELEC";
+            document.getElementById("cellSignificado").innerHTML = "Electrónico(a)";
+            break;
+          case "equiv":
+          case "equivalente":
+            hideStuff();
+            document.getElementById("strSimilares").style.display = "none";
+            document.getElementById("strNoCoincide").style.display = "none";
+            document.getElementById("cellTermino").innerHTML = "EQUIV";
+            document.getElementById("cellSignificado").innerHTML = "Equivalente";
+            break;
+          case "esq":
+          case "esquema":
+            hideStuff();
+            document.getElementById("strSimilares").style.display = "none";
+            document.getElementById("strNoCoincide").style.display = "none";
+            document.getElementById("cellTermino").innerHTML = "ESQ";
+            document.getElementById("cellSignificado").innerHTML = "Esquema";
+            break;
+          case "fact":
+          case "facturacion":
+            hideStuff();
+            document.getElementById("strSimilares").style.display = "none";
+            document.getElementById("strNoCoincide").style.display = "none";
+            document.getElementById("cellTermino").innerHTML = "FACT";
+            document.getElementById("cellSignificado").innerHTML = "Facturación";
+            break;
+          case "fec":
+          case "fecha":
+            hideStuff();
+            document.getElementById("strSimilares").style.display = "none";
+            document.getElementById("strNoCoincide").style.display = "none";
+            document.getElementById("cellTermino").innerHTML = "FEC";
+            document.getElementById("cellSignificado").innerHTML = "Fecha";
+            break;
+          case "fed":
+          case "federal":
+            hideStuff();
+            document.getElementById("strSimilares").style.display = "none";
+            document.getElementById("strNoCoincide").style.display = "none";
+            document.getElementById("cellTermino").innerHTML = "FED";
+            document.getElementById("cellSignificado").innerHTML = "Federal(es)";
+            break;
+          case "gat":
+          case "g.a.t.":
+          case "ganancia anual total":
+            hideStuff();
+            document.getElementById("strSimilares").style.display = "none";
+            document.getElementById("strNoCoincide").style.display = "none";
+            document.getElementById("cellTermino").innerHTML = "G.A.T.";
+            document.getElementById("cellSignificado").innerHTML = "Ganancia Anual Total";
+            break;
+          case "impto":
+          case "impuesto":
+          case "impuestos":
+            hideStuff();
+            document.getElementById("strSimilares").style.display = "none";
+            document.getElementById("strNoCoincide").style.display = "none";
+            document.getElementById("cellTermino").innerHTML = "IMPTO";
+            document.getElementById("cellSignificado").innerHTML = "Impuesto(s)";
+            break;
+          case "ini":
+          case "inicial":
+            hideStuff();
+            document.getElementById("strSimilares").style.display = "none";
+            document.getElementById("strNoCoincide").style.display = "none";
+            document.getElementById("cellTermino").innerHTML = "INI";
+            document.getElementById("cellSignificado").innerHTML = "Inicial";
+            break;
+          case "int":
+          case "ints":
+          case "interes":
+          case "intereses":
+            hideStuff();
+            document.getElementById("strSimilares").style.display = "none";
+            document.getElementById("strNoCoincide").style.display = "none";
+            document.getElementById("cellTermino").innerHTML = "INT / INTS";
+            document.getElementById("cellSignificado").innerHTML = "Interés(es)";
+            break;
+          case "intal":
+          case "internacional":
+            hideStuff();
+            document.getElementById("strSimilares").style.display = "none";
+            document.getElementById("strNoCoincide").style.display = "none";
+            document.getElementById("cellTermino").innerHTML = "INTAL";
+            document.getElementById("cellSignificado").innerHTML = "Internacional";
+            break;
+          case "inv":
+          case "inversion":
+            hideStuff();
+            document.getElementById("strSimilares").style.display = "none";
+            document.getElementById("strNoCoincide").style.display = "none";
+            document.getElementById("cellTermino").innerHTML = "INV";
+            document.getElementById("cellSignificado").innerHTML = "Inversión";
+            break;
+          case "lci":
+          case "linea de credito inmediata":
+            hideStuff();
+            document.getElementById("strSimilares").style.display = "none";
+            document.getElementById("strNoCoincide").style.display = "none";
+            document.getElementById("cellTermino").innerHTML = "LCI";
+            document.getElementById("cellSignificado").innerHTML = "Línea de Crédito <br> Inmediata";
+            break;
+          case "liq":
+          case "liquidacion":
+            hideStuff();
+            document.getElementById("strSimilares").style.display = "none";
+            document.getElementById("strNoCoincide").style.display = "none";
+            document.getElementById("cellTermino").innerHTML = "LIQ";
+            document.getElementById("cellSignificado").innerHTML = "Liquidación";
+            break;
+          case "loc":
+          case "linea de cobertura":
+            hideStuff();
+            document.getElementById("strSimilares").style.display = "none";
+            document.getElementById("strNoCoincide").style.display = "none";
+            document.getElementById("cellTermino").innerHTML = "LOC";
+            document.getElementById("cellSignificado").innerHTML = "Línea de cobertutra";
+            break;
+          case "lpi":
+          case "liena de proteccion inmediata":
+            hideStuff();
+            document.getElementById("strSimilares").style.display = "none";
+            document.getElementById("strNoCoincide").style.display = "none";
+            document.getElementById("cellTermino").innerHTML = "LPI";
+            document.getElementById("cellSignificado").innerHTML = "Línea de Protección Inmediata";
+            break;
+          case "mora":
+          case "moratorio":
+          case "moratorios":
+            hideStuff();
+            document.getElementById("strSimilares").style.display = "none";
+            document.getElementById("strNoCoincide").style.display = "none";
+            document.getElementById("cellTermino").innerHTML = "MORA";
+            document.getElementById("cellSignificado").innerHTML = "Moratorio(s)";
+            break;
+          case "n. op":
+          case "numero de operaciones":
+            hideStuff();
+            document.getElementById("strSimilares").style.display = "none";
+            document.getElementById("strNoCoincide").style.display = "none";
+            document.getElementById("cellTermino").innerHTML = "N. OP";
+            document.getElementById("cellSignificado").innerHTML = "Número de Operación(es)";
+            break;
+          case "no":
+          case "numero":
+            hideStuff();
+            document.getElementById("strSimilares").style.display = "none";
+            document.getElementById("strNoCoincide").style.display = "none";
+            document.getElementById("cellTermino").innerHTML = "NO";
+            document.getElementById("cellSignificado").innerHTML = "Número";
+            break;
+          case "nom":
+          case "nomina":
+            hideStuff();
+            document.getElementById("strSimilares").style.display = "none";
+            document.getElementById("strNoCoincide").style.display = "none";
+            document.getElementById("cellTermino").innerHTML = "NOM";
+            document.getElementById("cellSignificado").innerHTML = "Nómina";
+            break;
+          case "ord":
+          case "orden":
+            hideStuff();
+            document.getElementById("strSimilares").style.display = "none";
+            document.getElementById("strNoCoincide").style.display = "none";
+            document.getElementById("cellTermino").innerHTML = "ORD";
+            document.getElementById("cellSignificado").innerHTML = "Orden";
+            break;
+          case "p":
+          case "por":
+            hideStuff();
+            document.getElementById("strSimilares").style.display = "none";
+            document.getElementById("strNoCoincide").style.display = "none";
+            document.getElementById("cellTermino").innerHTML = "P";
+            document.getElementById("cellSignificado").innerHTML = "Por";
+            break;
+          case "pag":
+          case "pagare":
+          case "pagares":
+            hideStuff();
+            document.getElementById("strSimilares").style.display = "none";
+            document.getElementById("strNoCoincide").style.display = "none";
+            document.getElementById("cellTermino").innerHTML = "PAG";
+            document.getElementById("cellSignificado").innerHTML = "Pagaré(s)";
+            break;
+          case "per":
+          case "periodo":
+            hideStuff();
+            document.getElementById("strSimilares").style.display = "none";
+            document.getElementById("strNoCoincide").style.display = "none";
+            document.getElementById("cellTermino").innerHTML = "PER";
+            document.getElementById("cellSignificado").innerHTML = "Periodo";
+            break;
+          case "pgo":
+          case "pago":
+            hideStuff();
+            document.getElementById("strSimilares").style.display = "none";
+            document.getElementById("strNoCoincide").style.display = "none";
+            document.getElementById("cellTermino").innerHTML = "PGO";
+            document.getElementById("cellSignificado").innerHTML = "Pago";
+            break;
+          case "pzo":
+          case "plazo":
+            hideStuff();
+            document.getElementById("strSimilares").style.display = "none";
+            document.getElementById("strNoCoincide").style.display = "none";
+            document.getElementById("cellTermino").innerHTML = "PZO";
+            document.getElementById("cellSignificado").innerHTML = "Plazo";
+            break;
+          case "rec":
+          case "recibo":
+            hideStuff();
+            document.getElementById("strSimilares").style.display = "none";
+            document.getElementById("strNoCoincide").style.display = "none";
+            document.getElementById("cellTermino").innerHTML = "REC";
+            document.getElementById("cellSignificado").innerHTML = "Recibo";
+            break;
+          case "ref":
+          case "referencia":
+            hideStuff();
+            document.getElementById("strSimilares").style.display = "none";
+            document.getElementById("strNoCoincide").style.display = "none";
+            document.getElementById("cellTermino").innerHTML = "REF";
+            document.getElementById("cellSignificado").innerHTML = "Referencia";
+            break;
+          case "ren":
+          case "rendimiento":
+            hideStuff();
+            document.getElementById("strSimilares").style.display = "none";
+            document.getElementById("strNoCoincide").style.display = "none";
+            document.getElementById("cellTermino").innerHTML = "REN";
+            document.getElementById("cellSignificado").innerHTML = "Rendimiento";
+            break;
+          case "s":
+          case "sobre":
+            hideStuff();
+            document.getElementById("strSimilares").style.display = "none";
+            document.getElementById("strNoCoincide").style.display = "none";
+            document.getElementById("cellTermino").innerHTML = "S";
+            document.getElementById("cellSignificado").innerHTML = "Sobre";
+            break;
+          case "sbc":
+          case "salvo buen cobro":
+            hideStuff();
+            document.getElementById("strSimilares").style.display = "none";
+            document.getElementById("strNoCoincide").style.display = "none";
+            document.getElementById("cellTermino").innerHTML = "SBC";
+            document.getElementById("cellSignificado").innerHTML = "Salvo Buen Cobro";
+            break;
+          case "sdo":
+          case "saldo":
+            hideStuff();
+            document.getElementById("strSimilares").style.display = "none";
+            document.getElementById("strNoCoincide").style.display = "none";
+            document.getElementById("cellTermino").innerHTML = "SDO";
+            document.getElementById("cellSignificado").innerHTML = "Saldo";
+            break;
+          case "seg":
+          case "seguro":
+            hideStuff();
+            document.getElementById("strSimilares").style.display = "none";
+            document.getElementById("strNoCoincide").style.display = "none";
+            document.getElementById("cellTermino").innerHTML = "SEG";
+            document.getElementById("cellSignificado").innerHTML = "Seguro";
+            break;
+          case "ser":
+          case "servicio":
+            hideStuff();
+            document.getElementById("strSimilares").style.display = "none";
+            document.getElementById("strNoCoincide").style.display = "none";
+            document.getElementById("cellTermino").innerHTML = "SER";
+            document.getElementById("cellSignificado").innerHTML = "Servicio";
+            break;
+          case "spei":
+          case "sistema de pagos electronicos":
+          case "pagos electronicos":
+            hideStuff();
+            document.getElementById("strSimilares").style.display = "none";
+            document.getElementById("strNoCoincide").style.display = "none";
+            document.getElementById("cellTermino").innerHTML = "SPEI";
+            document.getElementById("cellSignificado").innerHTML = "Sistema de Pagos Electrónicos";
+            break;
+          case "suc":
+          case "sucursal":
+            hideStuff();
+            document.getElementById("strSimilares").style.display = "none";
+            document.getElementById("strNoCoincide").style.display = "none";
+            document.getElementById("cellTermino").innerHTML = "SUC";
+            document.getElementById("cellSignificado").innerHTML = "Sucursal";
+            break;
+          case "t":
+          case "tasa":
+            hideStuff();
+            document.getElementById("strSimilares").style.display = "none";
+            document.getElementById("strNoCoincide").style.display = "none";
+            document.getElementById("cellTermino").innerHTML = "T";
+            document.getElementById("cellSignificado").innerHTML = "Tasa";
+            break;  
+          case "tarj":
+          case "tarjeta":
+          case "tarjetas":
+            hideStuff();
+            document.getElementById("strSimilares").style.display = "none";
+            document.getElementById("strNoCoincide").style.display = "none";
+            document.getElementById("cellTermino").innerHTML = "TARJ";
+            document.getElementById("cellSignificado").innerHTML = "Tarjeta(s)";
+            break;
+          case "tef":
+          case "transferencia electronica de fondos":
+            hideStuff();
+            document.getElementById("strSimilares").style.display = "none";
+            document.getElementById("strNoCoincide").style.display = "none";
+            document.getElementById("cellTermino").innerHTML = "TEF";
+            document.getElementById("cellSignificado").innerHTML = "Transferencia Electrónica de Fondos";
+            break;
+          case "tvp":
+          case "terminal punto de venta":
+            hideStuff();
+            document.getElementById("strSimilares").style.display = "none";
+            document.getElementById("strNoCoincide").style.display = "none";
+            document.getElementById("cellTermino").innerHTML = "TVP";
+            document.getElementById("cellSignificado").innerHTML = "Terminal Punto de Venta";
+            break;
+          case "tarnsf":
+          case "transferencia":
+            hideStuff();
+            document.getElementById("strSimilares").style.display = "none";
+            document.getElementById("strNoCoincide").style.display = "none";
+            document.getElementById("cellTermino").innerHTML = "TRANSF";
+            document.getElementById("cellSignificado").innerHTML = "Transferencia";
+            break;
+          case "vta":
+          case "venta":
+          case "ventas":
+            hideStuff();
+            document.getElementById("strSimilares").style.display = "none";
+            document.getElementById("strNoCoincide").style.display = "none";
+            document.getElementById("cellTermino").innerHTML = "VTA";
+            document.getElementById("cellSignificado").innerHTML = "Venta(s)";
+            break;
+          case "vto":
+          case "vencimiento":
+            hideStuff();
+            document.getElementById("strSimilares").style.display = "none";
+            document.getElementById("strNoCoincide").style.display = "none";
+            document.getElementById("cellTermino").innerHTML = "VTO";
+            document.getElementById("cellSignificado").innerHTML = "Vencimiento";
+            break;
+          // Caso de no coincidencia en la búsqueda
+          default:
+            res = strSearch.substring(0, 1); 
+            res2 = strSearch.substring(0, 2); 
+            //alert("Vas a buscar: " + strSearch + " ---> " + res);
+            
+            if (res=="a") {
+              hideStuff();
+              document.getElementById("strSimilares").style.display = "block";
+              document.getElementById("strNoCoincide").style.display = "none";
+              document.getElementById("tabResults").style.display = "none";
+              document.getElementById("tabResultsA").style.display = "block";
+            } else if (res=="b") {
+              hideStuff();  
+              document.getElementById("strSimilares").style.display = "block";
+              document.getElementById("strNoCoincide").style.display = "none";
+              document.getElementById("tabResults").style.display = "none";
+              document.getElementById("tabResultsB").style.display = "block";
+            } else if (res=="c") {
+              hideStuff();
+              document.getElementById("strSimilares").style.display = "block";
+              document.getElementById("strNoCoincide").style.display = "none";
+              document.getElementById("tabResults").style.display = "none";
+              document.getElementById("tabResultsC").style.display = "block";
+            } else if (res=="d") {
+              hideStuff();
+              document.getElementById("strSimilares").style.display = "block";
+              document.getElementById("strNoCoincide").style.display = "none";
+              document.getElementById("tabResults").style.display = "none";
+              document.getElementById("tabResultsD").style.display = "block";
+            } else if (res=="e") {
+              hideStuff();
+              document.getElementById("strSimilares").style.display = "block";
+              document.getElementById("strNoCoincide").style.display = "none";
+              document.getElementById("tabResults").style.display = "none";
+              document.getElementById("tabResultsE").style.display = "block";
+            } else if (res=="f") {
+              hideStuff();
+              document.getElementById("strSimilares").style.display = "block";
+              document.getElementById("strNoCoincide").style.display = "none";
+              document.getElementById("tabResults").style.display = "none";
+              document.getElementById("tabResultsF").style.display = "block";
+            } else if (res=="g") {
+              hideStuff();
+              document.getElementById("strSimilares").style.display = "block";
+              document.getElementById("strNoCoincide").style.display = "none";
+              document.getElementById("tabResults").style.display = "none";
+              document.getElementById("tabResultsG").style.display = "block";
+            } else if (res=="i") {
+              hideStuff();
+              document.getElementById("strSimilares").style.display = "block";
+              document.getElementById("strNoCoincide").style.display = "none";
+              document.getElementById("tabResults").style.display = "none";
+              document.getElementById("tabResultsI").style.display = "block";
+            } else if (res=="l") {
+              hideStuff();
+              document.getElementById("strSimilares").style.display = "block";
+              document.getElementById("strNoCoincide").style.display = "none";
+              document.getElementById("tabResults").style.display = "none";
+              document.getElementById("tabResultsL").style.display = "block";
+            } else if (res=="m") {
+              hideStuff();
+              document.getElementById("strSimilares").style.display = "block";
+              document.getElementById("strNoCoincide").style.display = "none";
+              document.getElementById("tabResults").style.display = "none";
+              document.getElementById("tabResultsM").style.display = "block";
+            } else if (res=="n") {
+              hideStuff();
+              document.getElementById("strSimilares").style.display = "block";
+              document.getElementById("strNoCoincide").style.display = "none";
+              document.getElementById("tabResults").style.display = "none";
+              document.getElementById("tabResultsN").style.display = "block";
+            } else if (res=="o") {
+              hideStuff();
+              document.getElementById("strSimilares").style.display = "block";
+              document.getElementById("strNoCoincide").style.display = "none";
+              document.getElementById("tabResults").style.display = "none";
+              document.getElementById("tabResultsO").style.display = "block";
+            } else if (res=="p") {
+              hideStuff();
+              document.getElementById("strSimilares").style.display = "block";
+              document.getElementById("strNoCoincide").style.display = "none";
+              document.getElementById("tabResults").style.display = "none";
+              document.getElementById("tabResultsP").style.display = "block";
+            } else if (res=="r") {
+              hideStuff();
+              document.getElementById("strSimilares").style.display = "block";
+              document.getElementById("strNoCoincide").style.display = "none";
+              document.getElementById("tabResults").style.display = "none";
+              document.getElementById("tabResultsR").style.display = "block";
+            } else if (res=="s") {
+              hideStuff();
+              document.getElementById("strSimilares").style.display = "block";
+              document.getElementById("strNoCoincide").style.display = "none";
+              document.getElementById("tabResults").style.display = "none";
+              document.getElementById("tabResultsS").style.display = "block";
+            } else if (res=="t") {
+              hideStuff();
+              document.getElementById("strSimilares").style.display = "block";
+              document.getElementById("strNoCoincide").style.display = "none";
+              document.getElementById("tabResults").style.display = "none";
+              document.getElementById("tabResultsT").style.display = "block";
+            } else if (res=="v") {
+              hideStuff();
+              document.getElementById("strSimilares").style.display = "block";
+              document.getElementById("strNoCoincide").style.display = "none";
+              document.getElementById("tabResults").style.display = "none";
+              document.getElementById("tabResultsV").style.display = "block";
+            } else {
+              hideStuff();
+              document.getElementById("strSimilares").style.display = "none";
+              document.getElementById("strNoCoincide").style.display = "block";
+              document.getElementById("tabResults").style.display = "none";
+              alert("No se encontraron coincidencias");
+              document.getElementById("tabResults2").style.display = "none";
+            }
+        }
+      }
+
+      function hideStuff(){
+        //document.getElementById("tabResults").style.display = "none";
+        //document.getElementById("tabResults2").style.display = "none";
+        document.getElementById("tabResultsA").style.display = "none";
+        document.getElementById("tabResultsB").style.display = "none";
+        document.getElementById("tabResultsC").style.display = "none";
+        document.getElementById("tabResultsD").style.display = "none";
+        document.getElementById("tabResultsE").style.display = "none";
+        document.getElementById("tabResultsF").style.display = "none";
+        document.getElementById("tabResultsG").style.display = "none";
+        document.getElementById("tabResultsI").style.display = "none";
+        document.getElementById("tabResultsL").style.display = "none";
+        document.getElementById("tabResultsM").style.display = "none";
+        document.getElementById("tabResultsN").style.display = "none";
+        document.getElementById("tabResultsO").style.display = "none";
+        document.getElementById("tabResultsP").style.display = "none";
+        document.getElementById("tabResultsR").style.display = "none";
+        document.getElementById("tabResultsS").style.display = "none";
+        document.getElementById("tabResultsT").style.display = "none";
+        document.getElementById("tabResultsV").style.display = "none";
+      }
+
+
+    </script>
+
+
+
+</body>
+</html>

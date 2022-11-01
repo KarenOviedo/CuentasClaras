@@ -1,0 +1,836 @@
+/*==========================================================*/
+/*                   ESTILOS GENERALES                      */
+/*==========================================================*/
+body{
+	background-color: #fafafa;
+}
+
+h1{
+	font-size: 50px;
+}
+
+p{
+	font-size: 18px;
+}
+
+a{
+  color: #eb0000;
+}
+
+a:hover {
+  color: #a70000;
+}
+
+option{
+	background-color: #fafafa;	
+}
+
+.red-border{
+	border: 1px solid red;
+}
+
+
+
+/*----- FUENTES -----*/
+.font1 {
+	font-family: 'sansationbold';
+}
+
+.font2 {
+	font-family: 'sansation_lightregular';
+}
+
+.red-color{
+	color: #eb0000;
+}
+
+.red-color-cl{
+	color: #dc0000;
+}
+
+.red-color-osc{
+	color: #a70000;
+}
+
+.main-text hr{
+	width: 90%;
+    margin: 4vh auto 7vh auto;
+    border: none;
+    border-bottom: solid 1px #eb0000;
+    border-image: linear-gradient(to right,#ffbaba, #ff7b7b, #ff5252, #eb0000, #a70000);
+    border-image-slice: 1;
+}
+
+.supplementary-text hr{
+	width: 70%;
+    margin: 4vh auto 7vh auto;
+    border: none;
+    border-bottom: solid 1px #baa098;
+    border-image-slice: 1;
+}
+
+.subtitle{
+	line-height: 0.1;	
+}
+
+
+
+
+/*----- BARRA DE NAVEGACIÓN -----*/
+.my-bar{
+	background-color: #eb0000 !important;
+}
+
+.logo-navbar{
+	height: 28px;
+}
+
+.img-profile{
+	height: 30px;
+	width: 50px;
+	margin-left: 10px;	
+}
+
+.my-dropdown{
+	background-color: #c80000 !important;
+}
+
+.my-dropdown a{
+	color: white;
+	margin-left: 15px;
+	text-decoration: none;
+	line-height: 2.5;
+}
+
+.btn-profile button{
+	background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+	height: auto;
+}
+
+.btn-profile button:hover{
+	background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+	height: auto;
+}
+
+.btn-profile button:focus{
+	outline:0 !important;
+	outline-color: #eb0000;
+}
+
+.btn-profile-active button{
+	color: white;
+}
+
+.drp-link{
+	padding: 0px;
+}
+
+
+/*----- FOOTER -----*/
+
+.footer{
+    width: 100%;
+    height: auto;
+    background-color: #dfdfdf;
+    text-align: center;
+    margin-bottom: 0px;	
+}
+
+.footer p{
+	font-size: 13px;
+}
+
+.logo-footer{
+	width: 40px;
+	height: 40px;
+}
+
+
+
+/*==========================================================*/
+/*                    		LOGIN	                        */
+/*==========================================================*/
+.login{
+	margin: 10px;
+	display: flex;
+	align-items: center;
+	vertical-align: middle;
+	height:97vh;
+}
+
+.login h1{
+	font-size: 50px;
+}
+
+.form-signin {
+	margin-left: 10%;
+	width: 80%;
+}
+
+.form-label-group input {
+  border-radius: 1rem;
+}
+
+.form-label-group input[type=text] {
+    border: 1px solid #ff4d4d;
+    box-shadow: 0 0 0 1px #ff4d4d;
+}
+
+.form-label-group input[type=password] {
+    border: 1px solid #ff4d4d;
+    box-shadow: 0 0 0 1px #ff4d4d;
+}
+
+.form-signin .btn {
+	background-color: #a70000;
+	color: white;
+	font-size: 80%;
+	border-radius: 5rem;
+	letter-spacing: .1rem;
+	font-weight: bold;
+	padding: 1rem;
+	transition: all 0.2s;
+}
+
+.form-signin button:hover{
+	background-color: #dc0000;
+	height: auto;
+ 	overflow: hidden;
+ 	text-overflow: ellipsis;
+}
+
+/*----- Botón Secundario -----*/
+.form-signin2 .btn {
+  background-color: #c9c9c9;
+  color: #303030;
+  font-size: 75%;
+  border-radius: 5rem;
+  letter-spacing: .1rem;
+  font-weight: bold;
+  padding: 1rem;
+  transition: all 0.2s;
+}
+
+.form-signin2 button:hover{
+  background-color: #b5b5b5;
+  height: auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+/*----- Div para centrar botón -----*/
+.btn-centro{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+
+/*----- Custom CheckBox -----*/
+.containerCB {
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.containerCB input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #c9c9c9;
+  border: 1px solid #888888;
+  border-radius: 4px;
+}
+
+/* On mouse-over, add a grey background color */
+.containerCB:hover input ~ .checkmark {
+  background-color: #adadad;
+}
+
+/* When the checkbox is checked, add a red background */
+.containerCB input:checked ~ .checkmark {
+  background-color: #eb0000;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.containerCB input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.containerCB .checkmark:after {
+  left: 7px;
+  top: 3px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+
+.footer-login{
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	color: #393f44;
+	text-align: center;
+}
+
+.footer-login p{
+	font-size: 16px;
+}
+
+
+
+
+
+/*==========================================================*/
+/*                    		HOME		                    */
+/*==========================================================*/
+
+.logo_sntndr{
+	height: 50px;
+}
+
+.razon-soc p{
+	margin-bottom: 0px;
+}
+
+#carousel1{
+	border: 3px solid #a99481;
+}
+
+
+
+
+
+/*==========================================================*/
+/*                    ESTADO DE CUENTA                      */
+/*==========================================================*/
+
+.cards{
+	margin-left: 0px;
+}
+
+.btn-card button{
+	background-color: #a70000;
+	color: white;
+	text-align: left;
+	height: auto;
+	overflow: hidden;
+ 	text-overflow: ellipsis;
+}
+
+.btn-card button:hover{
+	background-color: #dc0000;
+	height: auto;
+ 	overflow: hidden;
+ 	text-overflow: ellipsis;
+}
+
+.my-thead{
+	text-align: center;
+	color: #fafafa;
+	border-bottom: 1px solid #510000!important;
+}
+
+.my-table th{
+	border-color: #510000;
+}
+
+.my-table td{
+	border-color: #510000;
+}
+
+.my-table tr{
+	border-color: #510000;
+}
+
+.my-table tbody{
+	border-color: #510000;
+}
+
+.my-table thead{
+	border-color: #510000;
+}
+
+.cards hr{
+	margin: 1vh auto 2vh auto;
+	width: 100%;
+    border-bottom: solid 2px #dee2e6;
+    border-image-slice: 1;
+}
+
+.producto-detalle{
+	margin-left: 5%;
+}
+
+.producto-total{
+	width: 100%;
+}
+
+.bl{
+	border-left: 4px solid #dee2e6;
+}
+
+.bg-total{
+	background-color: #f0f0f0;
+}
+
+.wdth-cell{
+	width: 155px;
+}
+
+.wdth-cell-half{
+	width: 50%;
+}
+
+.no-ml div{
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+
+
+
+.producto-mov{
+	width: auto;
+	height: 500px;
+	overflow-x: scroll;
+	background-color: #fafafa;
+}
+
+.producto-mov thead{
+	background-color: #4f4f4f;
+	color: #f0f0f0; 
+}
+
+
+
+
+
+
+/*---------------SWITCH----------------*/
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 56px;
+  height: 28px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #eb0000;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #eb0000;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 30px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+
+
+/*----- TABLA CON ENCABEZADO FIJO -----*/
+/*
+.header-fixed > thead,
+.header-fixed > tbody,
+.header-fixed > thead > tr,
+.header-fixed > tbody > tr,
+.header-fixed > thead > tr > th,
+.header-fixed > tbody > tr > td {
+    display: block;
+}
+
+.header-fixed > tbody > tr:after,
+.header-fixed > thead > tr:after {
+    content: ' ';
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+
+.header-fixed > tbody {
+    overflow-y: auto;
+    height: 500px;
+}
+
+.header-fixed > tbody > tr > td,
+.header-fixed > thead > tr > th,
+.header-fixed > tfoot > tr > th {
+  float: left;
+}
+
+.header-fixed1{
+  width: 9%;
+}
+
+.header-fixed2{
+  width: 9%;
+}
+
+.header-fixed3{
+  width: 48%;
+}
+
+.header-fixed4{
+  width: 12%;
+}
+
+.header-fixed5 {
+  width: 10%;
+}
+
+.header-fixed6{
+  width: 12%;
+}
+
+.header-fixed-col3{
+  width: 66%;
+}
+*/
+
+/*==========================================================*/
+/*                  PREGUNTAS FRECUENTES                    */
+/*==========================================================*/
+
+.btn-card2 button{
+	background-color: #dddddd;
+	text-align: left;
+	height: auto;
+	overflow: hidden;
+ 	text-overflow: ellipsis;
+}
+
+.btn-card2 button:hover{
+	background-color: #b8c7c7;
+  	height: auto;
+  	overflow: hidden;
+ 	text-overflow: ellipsis;
+}
+
+
+
+
+
+/*==========================================================*/
+/*               SECCIÓN DE HISTORIAL DE EDC                */
+/*==========================================================*/
+
+.history-thead{
+	text-align: center;
+	font-style: bold;
+	font-size: 18px;
+	background-color: #d0d0d0;
+}
+
+.history-table th{
+	text-align: center;
+}
+
+.history-table td{
+	text-align: center;
+}
+
+.history-table tr{
+	text-align: center;
+}
+
+.history-table tbody{
+	text-align: center;
+}
+
+.history-table thead{
+	text-align: center;
+}
+
+.logo-dwnld{
+	width: 30px;
+	height: 30px;
+}
+
+.btn-dwnld button{
+	background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+	height: auto;
+}
+
+.btn-dwnld button:hover{
+	background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+	height: auto;
+}
+
+
+
+/*==========================================================*/
+/*               		 BÚSQUEDA			                */
+/*==========================================================*/
+
+.logo-search{
+	width: 27px;
+	height: 27px;
+}
+
+/*----- BARRA DE BÚSQUEDA -----*/
+.active-red-4 input[type=text]:focus:not([readonly]) {
+    border: 1px solid #ff4d4d;
+    box-shadow: 0 0 0 1px #ff4d4d;
+}
+.active-red-3 input[type=text] {
+    border: 1px solid #ff4d4d;
+    box-shadow: 0 0 0 1px #ff4d4d;
+}
+
+
+
+
+
+
+/*==========================================================*/
+/*               		  PERFIL			                */
+/*==========================================================*/
+
+.profile-pic{
+	width: 150px;
+	height: 150px;
+}
+
+.letter-spacing{
+	letter-spacing: 5px;
+}
+
+.tab-profile-th{
+	background-color: #e8e8e8;
+}
+
+.barcode{
+	width: 99%;
+}
+
+.sep{
+	margin-left: 30px;
+}
+
+
+
+/*==========================================================*/
+/*               	  CONFIGURACIÓN			                */
+/*==========================================================*/
+
+.config-tab{
+	border: 2px solid #c8c8c8;
+	border-radius: 15px;
+	background-color: #ffffff;
+}
+
+.separacion{
+	width: 100%;
+	height: 60px;
+}
+
+.section-cards{
+	width: 80%;
+	margin-left: 10%;
+}
+
+.section-card{
+	width: 90%;
+	height: 50px;
+	border-radius: 5rem;
+	margin-bottom: 20px;
+	border: 2px solid #a70000;
+	background-color: #fafafa;
+}
+
+
+.section-card p{
+	margin: 10px 20px 10px 20px;
+}
+
+.section-icon{
+	width: 30px;
+	height: auto;
+	margin-bottom: 20px;
+}
+
+.section-icon h5{
+	margin: 5px 0px 5px 0px;
+}
+
+
+
+
+/*==========================================================*/
+/*                 	  INFORMACIÓN FICSAL			        */
+/*==========================================================*/
+
+.qr-img{
+	width: 200px;
+	margin: auto;
+}
+
+.sello{
+	word-break: break-all;
+}
+
+
+
+
+
+/*==========================================================*/
+/*                 	  BLOG CUENTAS CLARAS			        */
+/*==========================================================*/
+
+/* :: 15.0 Breadcumb Area CSS */
+.breadcumb-area {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  height: 300px; }
+  @media only screen and (max-width: 767px) {
+    .breadcumb-area {
+      height: 270px; } }
+  .breadcumb-area .bradcumbContent {
+    position: absolute;
+    background-color: #fff;
+    width: 552px;
+    bottom: 0;
+    left: 50%;
+    z-index: 100;
+    text-align: center;
+    padding-top: 40px;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%); }
+    @media only screen and (max-width: 767px) {
+      .breadcumb-area .bradcumbContent {
+        width: calc(100% - 60px);
+        padding-top: 30px; } }
+    .breadcumb-area .bradcumbContent p {
+      line-height: 1.5;
+      font-size: 16px;
+      color: #5f5f5f; }
+    .breadcumb-area .bradcumbContent h2 {
+      font-size: 30px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      line-height: 1;
+      margin-bottom: 0; }
+    .breadcumb-area .bradcumbContent p {
+      font-size: 18px;
+      letter-spacing: 2px; }
+      @media only screen and (max-width: 767px) {
+        .breadcumb-area .bradcumbContent h2 {
+          font-size: 18px;
+          letter-spacing: 5px; } }
+
+
+.bg-overlay {
+  position: relative;
+  z-index: 2;
+  background-position: center center;
+  background-size: cover; }
+  .bg-overlay::after {
+    background-color: rgba(0, 0, 0, 0.65);
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: ""; }
